@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "install_drone:drone3g_installer.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "mainApplicationBundlePath">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "drone3g_data_loop:drone_com.c">
+      </ContextState>
+      <ContextState
+         contextName = "-[Drone3GPREFWindowController loadControllerMap:]:Drone3GPREFWindowController.m">
+      </ContextState>
+      <ContextState
+         contextName = "udp_data_loop:drone_com.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "sizeof(drone3g_navdata_t)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

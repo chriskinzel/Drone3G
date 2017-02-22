@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <style type="text/css">
+            html { height: 100% }
+            body { height: 100%; margin: 0; padding: 0 }
+            #map-canvas { height: 100% }
+            </style>
+        <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyC-AoDY8svrMpqFptUhf70B_4oWJ3cjRlU&sensor=true">
+            </script>
+        <script type="text/javascript">
+            function initialize() {
+                var mapOptions = {
+                    zoomControl: false,
+                    panControl: false,
+                    center: new google.maps.LatLng(0, 0),
+                    mapTypeId: google.maps.MapTypeId.HYBRID,
+                    zoom: 18
+                };
+                
+                map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+                
+                homeIcons = new Array();
+                for(var i=0;i<360;i++) {
+                    var image = {
+                        url: "m" + i + ".png",
+                        scaledSize: new google.maps.Size(88,88),
+                        origin: new google.maps.Point(0,0),
+                        anchor: new google.maps.Point(44,44),
+                    };
+                    
+                    homeIcons[i] = image;
+                }
+                
+                droneIcons = new Array();
+                for(var i=0;i<360;i++) {
+                    var image = {
+                        url: i + ".png",
+                        scaledSize: new google.maps.Size(48,48),
+                        origin: new google.maps.Point(0,0),
+                    };
+                    
+                    droneIcons[i] = image;
+                }
+                
+                droneAngle = 0;
+                
+                curLoc = null;
+                homeLoc = null;
+                dummyLoc = null;
+            }
+        
+        function moveCurrentLocation(lat,lon) {
+            if(!curLoc) {
+                curLoc = new google.maps.Marker( {position: new google.maps.LatLng(lat, lon), map: map, title: "Last known location", optimized: false, icon: droneIcons[0]} );
+            }
+            
+            if(curLoc.position.lat() == lat && curLoc.position.lng() == lon) {
+                return;
+            }
+            
+            curLoc.setPosition( new google.maps.LatLng( lat, lon ) );
+            map.panTo(curLoc.position);
+            
+            updateConstraints();
+        }
+        
+        function setHomeLocation(lat,lon) {
+            if(!homeLoc) {
+                var homeImage = {
+                    url: "home.png",
+                    scaledSize: new google.maps.Size(32,32),
+                    origin: new google.maps.Point(0,0),
+                };
+                
+                homeLoc = new google.maps.Marker( {position: new google.maps.LatLng(lat, lon), map: map, title: "Launch Location", optimized: false, animation: google.maps.Animation.DROP, icon: homeImage} );
+                
+                dummyLoc = new google.maps.Marker( {position: new google.maps.LatLng(lat, lon), map: map, title: "Launch Location", optimized: false, icon: homeIcons[0]} );
+                dummyLoc.setVisible(false);
+            }
+            
+            homeLoc.setPosition( new google.maps.LatLng( lat, lon) );
+            dummyLoc.setPosition( new google.maps.LatLng( lat, lon) );
+            
+            updateConstraints();
+        }
+        
+        function setHeading(angle) {
+            if(!curLoc) {
+                return;
+            }
+            
+            if(Math.floor(angle) != droneAngle) {
+                droneAngle = Math.floor(angle);
+                curLoc.setIcon(droneIcons[droneAngle]);
+            }
+        }
+        
+        function updateConstraints() {
+            if(!homeLoc) {
+                return;
+            }
+            
+            if(!map.getBounds().contains(homeLoc.position) ) {
+                var bounds = map.getBounds();
+                
+                var dumLat = homeLoc.position.lat();
+                var dumLng = homeLoc.position.lng();
+                
+                if(homeLoc.position.lat() > bounds.getNorthEast().lat()) {
+                    dumLat = bounds.getNorthEast().lat();
+                }
+                if(homeLoc.position.lng() > bounds.getNorthEast().lng()) {
+                    dumLng = bounds.getNorthEast().lng();
+                }
+                if(homeLoc.position.lat() < bounds.getSouthWest().lat()) {
+                    dumLat = bounds.getSouthWest().lat();
+                }
+                if(homeLoc.position.lng() < bounds.getSouthWest().lng()) {
+                    dumLng = bounds.getSouthWest().lng();
+                }
+                
+                dummyLoc.setPosition(new google.maps.LatLng( dumLat, dumLng));
+                
+                var dy = curLoc.position.lat()-homeLoc.position.lat();
+                var dx = homeLoc.position.lng()-curLoc.position.lng();
+                
+                var homeAngle = Math.atan2(dy,dx);
+                homeAngle *= 180/Math.PI;
+                homeAngle = (homeAngle + 630.0) % 360.0;
+                
+                dummyLoc.setIcon(homeIcons[Math.floor(homeAngle)]);
+                dummyLoc.setVisible(true);
+            } else {
+                dummyLoc.setVisible(false);
+            }
+        }
+        
+        google.maps.event.addDomListener(window, 'load', initialize);
+            </script>
+    </head>
+    <body>
+        <div id="map-canvas"/>
+    </body>
+</html>

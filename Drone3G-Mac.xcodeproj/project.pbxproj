@@ -1,0 +1,1576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8318AA42190C9AA40023FBAC /* beep_a.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8318AA41190C9AA40023FBAC /* beep_a.mp3 */; };
+		831E9BF218A5BAC40085E86D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831E9BF118A5BAC40085E86D /* OpenGL.framework */; };
+		831E9BF518A5BD6F0085E86D /* Drone3GGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 831E9BF418A5BD6F0085E86D /* Drone3GGLView.m */; };
+		831FAB4718904BCB00021F5E /* battery.png in Resources */ = {isa = PBXBuildFile; fileRef = 831FAB4618904BCB00021F5E /* battery.png */; };
+		832E9D5C19843B560013AA3A /* wifi_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 832E9D5B19843B560013AA3A /* wifi_icon.png */; };
+		832E9D5E19843CE70013AA3A /* drone3g_installer.c in Sources */ = {isa = PBXBuildFile; fileRef = 832E9D5D19843CE70013AA3A /* drone3g_installer.c */; };
+		832E9D611984703C0013AA3A /* connected.png in Resources */ = {isa = PBXBuildFile; fileRef = 832E9D601984703C0013AA3A /* connected.png */; };
+		832E9D671988758C0013AA3A /* Drone3GUninstallerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832E9D651988758C0013AA3A /* Drone3GUninstallerWindowController.m */; };
+		832E9D681988758C0013AA3A /* Uninstaller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832E9D661988758C0013AA3A /* Uninstaller.xib */; };
+		83322E47197C7D8800441890 /* away.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83322E45197C7D8800441890 /* away.mp3 */; };
+		83322E48197C7D8800441890 /* back.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83322E46197C7D8800441890 /* back.mp3 */; };
+		83322E4A197C7F4F00441890 /* pop2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83322E49197C7F4F00441890 /* pop2.mp3 */; };
+		834026DD1977053600764B60 /* NSDateComponents+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 834026DC1977053600764B60 /* NSDateComponents+Additions.m */; };
+		834026DF1977553000764B60 /* Grab.aif in Resources */ = {isa = PBXBuildFile; fileRef = 834026DE1977553000764B60 /* Grab.aif */; };
+		834026E31978AA0A00764B60 /* NSFileManager+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 834026E21978AA0A00764B60 /* NSFileManager+Additions.m */; };
+		834026E81978BFF400764B60 /* Drone3GPhotosWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 834026E61978BFF400764B60 /* Drone3GPhotosWindowController.m */; };
+		834026E91978BFF400764B60 /* PhotoViewerWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 834026E71978BFF400764B60 /* PhotoViewerWindow.xib */; };
+		834026EC1978C4D500764B60 /* Drone3GPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 834026EB1978C4D500764B60 /* Drone3GPhoto.m */; };
+		834026F01978F82D00764B60 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834026EF1978F82D00764B60 /* CoreServices.framework */; };
+		834026F41979965300764B60 /* Drone3GSelectionBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 834026F31979965300764B60 /* Drone3GSelectionBox.m */; };
+		834026F71979984E00764B60 /* Drone3GPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 834026F61979984E00764B60 /* Drone3GPhotoController.m */; };
+		834026FB19799E6600764B60 /* Drone3GCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 834026FA19799E6600764B60 /* Drone3GCollectionView.m */; };
+		834026FD1979CA2000764B60 /* close_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 834026FC1979CA2000764B60 /* close_button.png */; };
+		83429A3C1980E1C10043ED76 /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = 83429A3B1980E1C10043ED76 /* main.png */; };
+		83429A40198187B90043ED76 /* Drone3GMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 83429A3F198187B90043ED76 /* Drone3GMenuButton.m */; };
+		83429A43198197B20043ED76 /* clickf.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83429A41198197B20043ED76 /* clickf.mp3 */; };
+		83429A47198199EE0043ED76 /* Drone3GMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 83429A46198199EE0043ED76 /* Drone3GMenu.m */; };
+		83429A5619822A080043ED76 /* Drone3GInstallerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83429A5419822A080043ED76 /* Drone3GInstallerWindowController.m */; };
+		83429A5719822A080043ED76 /* Installer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83429A5519822A080043ED76 /* Installer.xib */; };
+		834F162A18BC36A000BFE899 /* 3GTower.png in Resources */ = {isa = PBXBuildFile; fileRef = 834F162918BC36A000BFE899 /* 3GTower.png */; };
+		83596FF918BC132C00FC5FEA /* DataUsageWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83596FF818BC132C00FC5FEA /* DataUsageWindow.xib */; };
+		83596FFF18BC1B9400FC5FEA /* Drone3GDATWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83596FFE18BC1B9400FC5FEA /* Drone3GDATWindowController.m */; };
+		8363D4871A64EF61009F317F /* Media-Help.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 8363D4861A64EF61009F317F /* Media-Help.rtfd */; };
+		836B373419AFBB8E00CB1021 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 836B373319AFBB8E00CB1021 /* Credits.rtf */; };
+		836FCD99189DC4AD00EBC36E /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83D6F09F188DB4CF00830FD3 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		837075F318FE296900A5FAE4 /* drone_com.c in Sources */ = {isa = PBXBuildFile; fileRef = 837075F218FE296900A5FAE4 /* drone_com.c */; };
+		837179221990062600D745F9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D734B4198F302E008CBB1F /* AVFoundation.framework */; };
+		837179231990062B00D745F9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8371791E198F335A00D745F9 /* CoreMedia.framework */; };
+		837E046F1980652E004B86FA /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 837E046E1980652E004B86FA /* title.png */; };
+		8384E5711A6CB9380089353E /* drone3g.install in Resources */ = {isa = PBXBuildFile; fileRef = 8384E5701A6CB9380089353E /* drone3g.install */; };
+		83932E6E1A5DDCD5005CC96E /* router.png in Resources */ = {isa = PBXBuildFile; fileRef = 83932E6D1A5DDCD5005CC96E /* router.png */; };
+		83932E701A5DDEE0005CC96E /* help_modem.png in Resources */ = {isa = PBXBuildFile; fileRef = 83932E6F1A5DDEE0005CC96E /* help_modem.png */; };
+		83932E721A5DE22A005CC96E /* help_media.png in Resources */ = {isa = PBXBuildFile; fileRef = 83932E711A5DE22A005CC96E /* help_media.png */; };
+		83932E741A5DF00B005CC96E /* Drone3G-Help.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 83932E731A5DF00B005CC96E /* Drone3G-Help.rtfd */; };
+		83932E791A5F2CAF005CC96E /* Forwarding-Help.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 83932E781A5F2CAF005CC96E /* Forwarding-Help.rtfd */; };
+		83932E7B1A5F4455005CC96E /* Carrier-Help.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 83932E7A1A5F4455005CC96E /* Carrier-Help.rtfd */; };
+		83932E7F1A5F5B78005CC96E /* Modem-Help.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 83932E7E1A5F5B78005CC96E /* Modem-Help.rtfd */; };
+		83932E811A620351005CC96E /* Login-Help.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 83932E801A620351005CC96E /* Login-Help.rtfd */; };
+		83932E831A6213B1005CC96E /* Connection-Help.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 83932E821A6213B1005CC96E /* Connection-Help.rtfd */; };
+		83932E851A63115D005CC96E /* Proxy-Help.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 83932E841A63115D005CC96E /* Proxy-Help.rtfd */; };
+		839B90CF1A4DEA7B002102EB /* Drone3GCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 839B90CE1A4DEA7B002102EB /* Drone3GCheckBox.m */; };
+		83AB28FB199436E6000332A8 /* Drone3GHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB28FA199436E6000332A8 /* Drone3GHUD.m */; };
+		83AB290119945A73000332A8 /* inclinometer.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AB290019945A73000332A8 /* inclinometer.png */; };
+		83ABBEE418B8A4AF00EF0C7A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83ABBEE318B8A4AF00EF0C7A /* QuartzCore.framework */; };
+		83B4351B18E6946900E8C771 /* drone_main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B4351A18E6946900E8C771 /* drone_main.m */; };
+		83B4351D18E694BC00E8C771 /* Drone3GAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B4351C18E694BC00E8C771 /* Drone3GAppDelegate.m */; };
+		83BB0E2A19F312A600019E30 /* main_yose.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BB0E2919F312A600019E30 /* main_yose.png */; };
+		83BB0E3119F347A300019E30 /* Drone3GProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB0E3019F347A300019E30 /* Drone3GProgressIndicator.m */; };
+		83C3BBB019C68E7100D3B7F6 /* libavcodec.56.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C3BB9819C68E7100D3B7F6 /* libavcodec.56.dylib */; };
+		83C3BBB519C68E7100D3B7F6 /* libavdevice.56.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C3BB9D19C68E7100D3B7F6 /* libavdevice.56.dylib */; };
+		83C3BBB819C68E7100D3B7F6 /* libavfilter.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C3BBA019C68E7100D3B7F6 /* libavfilter.5.dylib */; };
+		83C3BBBB19C68E7100D3B7F6 /* libavformat.56.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C3BBA319C68E7100D3B7F6 /* libavformat.56.dylib */; };
+		83C3BBBE19C68E7100D3B7F6 /* libavresample.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C3BBA619C68E7100D3B7F6 /* libavresample.2.dylib */; };
+		83C3BBC119C68E7200D3B7F6 /* libavutil.54.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C3BBA919C68E7100D3B7F6 /* libavutil.54.dylib */; };
+		83C3BBC419C68E7200D3B7F6 /* libswresample.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C3BBAC19C68E7100D3B7F6 /* libswresample.1.dylib */; };
+		83C3BBC719C68E7200D3B7F6 /* libswscale.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C3BBAF19C68E7100D3B7F6 /* libswscale.3.dylib */; };
+		83C3BBC819C68EE800D3B7F6 /* libavcodec.56.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83C3BB9819C68E7100D3B7F6 /* libavcodec.56.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		83C3BBC919C68EE800D3B7F6 /* libavdevice.56.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83C3BB9D19C68E7100D3B7F6 /* libavdevice.56.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		83C3BBCA19C68EE800D3B7F6 /* libavfilter.5.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83C3BBA019C68E7100D3B7F6 /* libavfilter.5.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		83C3BBCB19C68EE800D3B7F6 /* libavformat.56.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83C3BBA319C68E7100D3B7F6 /* libavformat.56.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		83C3BBCC19C68EE800D3B7F6 /* libavresample.2.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83C3BBA619C68E7100D3B7F6 /* libavresample.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		83C3BBCD19C68EE800D3B7F6 /* libavutil.54.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83C3BBA919C68E7100D3B7F6 /* libavutil.54.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		83C3BBCE19C68EE800D3B7F6 /* libswresample.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83C3BBAC19C68E7100D3B7F6 /* libswresample.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		83C3BBCF19C68EE800D3B7F6 /* libswscale.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83C3BBAF19C68E7100D3B7F6 /* libswscale.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		83C6AE571982D58800D3B009 /* install_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C6AE561982D58800D3B009 /* install_splash.png */; };
+		83C6AE5B1982D8EE00D3B009 /* radio_current.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C6AE581982D8EE00D3B009 /* radio_current.png */; };
+		83C6AE5C1982D8EE00D3B009 /* radio_distant.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C6AE591982D8EE00D3B009 /* radio_distant.png */; };
+		83C6AE5D1982D8EE00D3B009 /* radio_next.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C6AE5A1982D8EE00D3B009 /* radio_next.png */; };
+		83C6AE5F1982E15100D3B009 /* modem.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C6AE5E1982E15100D3B009 /* modem.png */; };
+		83C6AE611982E28400D3B009 /* install_drone_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C6AE601982E28400D3B009 /* install_drone_icon.png */; };
+		83C6AE661982E8B500D3B009 /* arbat2.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C6AE651982E8B500D3B009 /* arbat2.png */; };
+		83C6AE681982EBF600D3B009 /* microsd.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C6AE671982EBF600D3B009 /* microsd.png */; };
+		83C6AE6B1982EF6200D3B009 /* Drone3GProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C6AE6A1982EF6200D3B009 /* Drone3GProgressView.m */; };
+		83C6AE6E1982FEC600D3B009 /* install_done.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C6AE6D1982FEC600D3B009 /* install_done.png */; };
+		83C6AE70198303BA00D3B009 /* burn complete.aif in Resources */ = {isa = PBXBuildFile; fileRef = 83C6AE6F198303BA00D3B009 /* burn complete.aif */; };
+		83C7A16A19B969E1004C33FC /* Drone3GWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7A16919B969E1004C33FC /* Drone3GWindow.m */; };
+		83C7A16D19B96CD3004C33FC /* Drone3GLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7A16C19B96CD3004C33FC /* Drone3GLoginView.m */; };
+		83C819D6191723A00006097B /* HUD_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C819D4191723A00006097B /* HUD_background.png */; };
+		83C819D7191723A00006097B /* HUD.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C819D5191723A00006097B /* HUD.png */; };
+		83CA2FD5199B265D006B6385 /* Drone3GTipGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CA2FD4199B265D006B6385 /* Drone3GTipGenerator.m */; };
+		83CA300219A28920006B6385 /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CA300119A28920006B6385 /* NSData+AES256.m */; };
+		83CCC76118B8567600A27DD0 /* 3g_tower.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CCC76018B8567600A27DD0 /* 3g_tower.png */; };
+		83CCC76318B8568300A27DD0 /* controller.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CCC76218B8568300A27DD0 /* controller.png */; };
+		83CD540719929D30004D1B79 /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CD540619929D30004D1B79 /* record.png */; };
+		83CD54091992CB34004D1B79 /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CD54081992CB34004D1B79 /* play_button.png */; };
+		83CFD12C198C38B200A64D44 /* photo_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CFD12B198C38B200A64D44 /* photo_splash.png */; };
+		83D0A949197B6B5A005181D5 /* Drone3GWindowMover.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D0A948197B6B5A005181D5 /* Drone3GWindowMover.m */; };
+		83D164DD18E8EA8500EB83BC /* Drone3GPLANWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D164DB18E8EA8500EB83BC /* Drone3GPLANWindowController.m */; };
+		83D164DE18E8EA8500EB83BC /* FlightPlanner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D164DC18E8EA8500EB83BC /* FlightPlanner.xib */; };
+		83D164E218E8ED3500EB83BC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D164E118E8ED3500EB83BC /* WebKit.framework */; };
+		83D3362B18EE468C00F6FF76 /* joystickW.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D3362A18EE468C00F6FF76 /* joystickW.png */; };
+		83D3362E18EE4CE500F6FF76 /* NSComboBoxExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D3362D18EE4CE500F6FF76 /* NSComboBoxExt.m */; };
+		83D48BD91A5A4D99004BC862 /* Drone3GTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D48BD81A5A4D99004BC862 /* Drone3GTextView.m */; };
+		83D48BDC1A5A9A67004BC862 /* Drone3GScrollViewOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D48BDB1A5A9A67004BC862 /* Drone3GScrollViewOverlay.m */; };
+		83D48BDE1A5D03E1004BC862 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D48BDD1A5D03E1004BC862 /* help.png */; };
+		83D48BE51A5D1E65004BC862 /* Drone3GHelpWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D48BE31A5D1E65004BC862 /* Drone3GHelpWindowController.m */; };
+		83D48BE61A5D1E65004BC862 /* HelpWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D48BE41A5D1E65004BC862 /* HelpWindow.xib */; };
+		83D48BE81A5D299B004BC862 /* Controller-Help.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 83D48BE71A5D299B004BC862 /* Controller-Help.rtfd */; };
+		83D4AE931957B4DB00994A0D /* Drone3GMDCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D4AE921957B4DB00994A0D /* Drone3GMDCalculator.m */; };
+		83D6A38F1890D3E3005B260C /* 3g1.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D6A38B1890D3E3005B260C /* 3g1.png */; };
+		83D6A3901890D3E3005B260C /* 3g2.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D6A38C1890D3E3005B260C /* 3g2.png */; };
+		83D6A3911890D3E3005B260C /* 3g3.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D6A38D1890D3E3005B260C /* 3g3.png */; };
+		83D6A3921890D3E3005B260C /* 3g4.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D6A38E1890D3E3005B260C /* 3g4.png */; };
+		83D6F06C188DB4B200830FD3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D6F06B188DB4B200830FD3 /* Cocoa.framework */; };
+		83D6F076188DB4B200830FD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83D6F074188DB4B200830FD3 /* InfoPlist.strings */; };
+		83D6F078188DB4B200830FD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D6F077188DB4B200830FD3 /* main.m */; };
+		83D6F082188DB4B200830FD3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D6F080188DB4B200830FD3 /* MainMenu.xib */; };
+		83D6F084188DB4B200830FD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D6F083188DB4B200830FD3 /* Images.xcassets */; };
+		83D6F08B188DB4B200830FD3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D6F08A188DB4B200830FD3 /* XCTest.framework */; };
+		83D6F08C188DB4B200830FD3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D6F06B188DB4B200830FD3 /* Cocoa.framework */; };
+		83D6F094188DB4B200830FD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83D6F092188DB4B200830FD3 /* InfoPlist.strings */; };
+		83D6F096188DB4B300830FD3 /* Drone3G_MacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D6F095188DB4B300830FD3 /* Drone3G_MacTests.m */; };
+		83D6F0A0188DB4CF00830FD3 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D6F09F188DB4CF00830FD3 /* SDL2.framework */; };
+		83D742F918D3FAED009D3C9F /* Drone3GPREFWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D742F718D3FAED009D3C9F /* Drone3GPREFWindowController.m */; };
+		83D742FA18D3FAED009D3C9F /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D742F818D3FAED009D3C9F /* PreferencesWindow.xib */; };
+		83DB77F818E91335007C1E62 /* map.html in Resources */ = {isa = PBXBuildFile; fileRef = 83DB77F718E91335007C1E62 /* map.html */; };
+		83E0463018DD1CAE003ADBCB /* joystick.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E0462F18DD1CAE003ADBCB /* joystick.png */; };
+		83E0463418DD2795003ADBCB /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E0463318DD2795003ADBCB /* home.png */; };
+		83E0463618DD2E67003ADBCB /* HUD_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E0463518DD2E67003ADBCB /* HUD_icon.png */; };
+		83E0463818DEA907003ADBCB /* controller_layout.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E0463718DEA907003ADBCB /* controller_layout.png */; };
+		83E0C9F91936B79B00D2CBC7 /* lost.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E0C9F81936B79B00D2CBC7 /* lost.png */; };
+		83F38EA91A44E88B00AC17E0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F38EA81A44E88B00AC17E0 /* Security.framework */; };
+		83F4E83518DFDAF900C21F3C /* Drone3GControllerLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F4E83418DFDAF900C21F3C /* Drone3GControllerLayoutView.m */; };
+		83F7D72519A41ADE00BB9C9D /* Drone3G EULA.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 83F7D72419A41ADE00BB9C9D /* Drone3G EULA.rtf */; };
+		83F7D72919A518CD00BB9C9D /* Install-intro.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 83F7D72819A518CD00BB9C9D /* Install-intro.rtfd */; };
+		83F7D73519A5D6C200BB9C9D /* Uninstall-intro.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 83F7D73419A5D6C200BB9C9D /* Uninstall-intro.rtfd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83D6F08D188DB4B200830FD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83D6F060188DB4B200830FD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83D6F067188DB4B200830FD3;
+			remoteInfo = "Drone3G-Mac";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		836FCD98189DC49C00EBC36E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				836FCD99189DC4AD00EBC36E /* SDL2.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A631DD19C6403F00CB849A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				83C3BBC819C68EE800D3B7F6 /* libavcodec.56.dylib in CopyFiles */,
+				83C3BBC919C68EE800D3B7F6 /* libavdevice.56.dylib in CopyFiles */,
+				83C3BBCA19C68EE800D3B7F6 /* libavfilter.5.dylib in CopyFiles */,
+				83C3BBCB19C68EE800D3B7F6 /* libavformat.56.dylib in CopyFiles */,
+				83C3BBCC19C68EE800D3B7F6 /* libavresample.2.dylib in CopyFiles */,
+				83C3BBCD19C68EE800D3B7F6 /* libavutil.54.dylib in CopyFiles */,
+				83C3BBCE19C68EE800D3B7F6 /* libswresample.1.dylib in CopyFiles */,
+				83C3BBCF19C68EE800D3B7F6 /* libswscale.3.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8318AA41190C9AA40023FBAC /* beep_a.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = beep_a.mp3; path = "../../app sounds/beep_a.mp3"; sourceTree = "<group>"; };
+		831E9BF118A5BAC40085E86D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		831E9BF318A5BD6F0085E86D /* Drone3GGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GGLView.h; sourceTree = "<group>"; };
+		831E9BF418A5BD6F0085E86D /* Drone3GGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GGLView.m; sourceTree = "<group>"; };
+		831FAB4618904BCB00021F5E /* battery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = battery.png; sourceTree = "<group>"; };
+		832E9D5B19843B560013AA3A /* wifi_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wifi_icon.png; path = "../../app images/wifi_icon.png"; sourceTree = "<group>"; };
+		832E9D5D19843CE70013AA3A /* drone3g_installer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = drone3g_installer.c; sourceTree = "<group>"; };
+		832E9D5F19843CF70013AA3A /* drone3g_installer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drone3g_installer.h; sourceTree = "<group>"; };
+		832E9D601984703C0013AA3A /* connected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = connected.png; path = "../../app images/connected.png"; sourceTree = "<group>"; };
+		832E9D641988758C0013AA3A /* Drone3GUninstallerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GUninstallerWindowController.h; sourceTree = "<group>"; };
+		832E9D651988758C0013AA3A /* Drone3GUninstallerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GUninstallerWindowController.m; sourceTree = "<group>"; };
+		832E9D661988758C0013AA3A /* Uninstaller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Uninstaller.xib; sourceTree = "<group>"; };
+		83322E45197C7D8800441890 /* away.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = away.mp3; path = "../../app sounds/away.mp3"; sourceTree = "<group>"; };
+		83322E46197C7D8800441890 /* back.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = back.mp3; path = "../../app sounds/back.mp3"; sourceTree = "<group>"; };
+		83322E49197C7F4F00441890 /* pop2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = pop2.mp3; path = "../../app sounds/pop2.mp3"; sourceTree = "<group>"; };
+		834026DB1977053600764B60 /* NSDateComponents+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateComponents+Additions.h"; sourceTree = "<group>"; };
+		834026DC1977053600764B60 /* NSDateComponents+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateComponents+Additions.m"; sourceTree = "<group>"; };
+		834026DE1977553000764B60 /* Grab.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = Grab.aif; path = ../../../../../System/Library/Components/CoreAudio.component/Contents/SharedSupport/SystemSounds/system/Grab.aif; sourceTree = "<group>"; };
+		834026E11978AA0A00764B60 /* NSFileManager+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Additions.h"; sourceTree = "<group>"; };
+		834026E21978AA0A00764B60 /* NSFileManager+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Additions.m"; sourceTree = "<group>"; };
+		834026E51978BFF400764B60 /* Drone3GPhotosWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GPhotosWindowController.h; sourceTree = "<group>"; };
+		834026E61978BFF400764B60 /* Drone3GPhotosWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GPhotosWindowController.m; sourceTree = "<group>"; };
+		834026E71978BFF400764B60 /* PhotoViewerWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewerWindow.xib; sourceTree = "<group>"; };
+		834026EA1978C4D500764B60 /* Drone3GPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GPhoto.h; sourceTree = "<group>"; };
+		834026EB1978C4D500764B60 /* Drone3GPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GPhoto.m; sourceTree = "<group>"; };
+		834026EF1978F82D00764B60 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		834026F21979965300764B60 /* Drone3GSelectionBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GSelectionBox.h; sourceTree = "<group>"; };
+		834026F31979965300764B60 /* Drone3GSelectionBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GSelectionBox.m; sourceTree = "<group>"; };
+		834026F51979984E00764B60 /* Drone3GPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GPhotoController.h; sourceTree = "<group>"; };
+		834026F61979984E00764B60 /* Drone3GPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GPhotoController.m; sourceTree = "<group>"; };
+		834026F919799E6600764B60 /* Drone3GCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GCollectionView.h; sourceTree = "<group>"; };
+		834026FA19799E6600764B60 /* Drone3GCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GCollectionView.m; sourceTree = "<group>"; };
+		834026FC1979CA2000764B60 /* close_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close_button.png; path = "../../app images/close_button.png"; sourceTree = "<group>"; };
+		83429A3B1980E1C10043ED76 /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = main.png; path = "../../app images/main.png"; sourceTree = "<group>"; };
+		83429A3E198187B90043ED76 /* Drone3GMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GMenuButton.h; sourceTree = "<group>"; };
+		83429A3F198187B90043ED76 /* Drone3GMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GMenuButton.m; sourceTree = "<group>"; };
+		83429A41198197B20043ED76 /* clickf.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = clickf.mp3; path = "../../app sounds/clickf.mp3"; sourceTree = "<group>"; };
+		83429A45198199EE0043ED76 /* Drone3GMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GMenu.h; sourceTree = "<group>"; };
+		83429A46198199EE0043ED76 /* Drone3GMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GMenu.m; sourceTree = "<group>"; };
+		83429A5319822A080043ED76 /* Drone3GInstallerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GInstallerWindowController.h; sourceTree = "<group>"; };
+		83429A5419822A080043ED76 /* Drone3GInstallerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GInstallerWindowController.m; sourceTree = "<group>"; };
+		83429A5519822A080043ED76 /* Installer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Installer.xib; sourceTree = "<group>"; };
+		834F162918BC36A000BFE899 /* 3GTower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3GTower.png; path = "../../app images/3GTower.png"; sourceTree = "<group>"; };
+		83596FF818BC132C00FC5FEA /* DataUsageWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DataUsageWindow.xib; path = ../DataUsageWindow.xib; sourceTree = "<group>"; };
+		83596FFD18BC1B9400FC5FEA /* Drone3GDATWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GDATWindowController.h; sourceTree = "<group>"; };
+		83596FFE18BC1B9400FC5FEA /* Drone3GDATWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GDATWindowController.m; sourceTree = "<group>"; };
+		8363D4861A64EF61009F317F /* Media-Help.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = "Media-Help.rtfd"; path = "../../Media-Help.rtfd"; sourceTree = "<group>"; };
+		836B373319AFBB8E00CB1021 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		837075F218FE296900A5FAE4 /* drone_com.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; name = drone_com.c; path = ../drone_com.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
+		8371791E198F335A00D745F9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		837E046E1980652E004B86FA /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = title.png; path = "../../app images/title.png"; sourceTree = "<group>"; };
+		8384E5701A6CB9380089353E /* drone3g.install */ = {isa = PBXFileReference; lastKnownFileType = file; name = drone3g.install; path = ../../drone3g.install; sourceTree = "<group>"; };
+		83932E6D1A5DDCD5005CC96E /* router.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = router.png; path = "../../app images/router.png"; sourceTree = "<group>"; };
+		83932E6F1A5DDEE0005CC96E /* help_modem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = help_modem.png; path = "../../app images/help_modem.png"; sourceTree = "<group>"; };
+		83932E711A5DE22A005CC96E /* help_media.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = help_media.png; path = "../../app images/help_media.png"; sourceTree = "<group>"; };
+		83932E731A5DF00B005CC96E /* Drone3G-Help.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = "Drone3G-Help.rtfd"; path = "../../Drone3G-Help.rtfd"; sourceTree = "<group>"; };
+		83932E781A5F2CAF005CC96E /* Forwarding-Help.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = "Forwarding-Help.rtfd"; path = "../../Forwarding-Help.rtfd"; sourceTree = "<group>"; };
+		83932E7A1A5F4455005CC96E /* Carrier-Help.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = "Carrier-Help.rtfd"; path = "../../Carrier-Help.rtfd"; sourceTree = "<group>"; };
+		83932E7E1A5F5B78005CC96E /* Modem-Help.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = "Modem-Help.rtfd"; path = "../../Modem-Help.rtfd"; sourceTree = "<group>"; };
+		83932E801A620351005CC96E /* Login-Help.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = "Login-Help.rtfd"; path = "../../Login-Help.rtfd"; sourceTree = "<group>"; };
+		83932E821A6213B1005CC96E /* Connection-Help.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = "Connection-Help.rtfd"; path = "../../Connection-Help.rtfd"; sourceTree = "<group>"; };
+		83932E841A63115D005CC96E /* Proxy-Help.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = "Proxy-Help.rtfd"; path = "../../Proxy-Help.rtfd"; sourceTree = "<group>"; };
+		839B90CD1A4DEA7B002102EB /* Drone3GCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GCheckBox.h; sourceTree = "<group>"; };
+		839B90CE1A4DEA7B002102EB /* Drone3GCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GCheckBox.m; sourceTree = "<group>"; };
+		83AB28F9199436E6000332A8 /* Drone3GHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GHUD.h; sourceTree = "<group>"; };
+		83AB28FA199436E6000332A8 /* Drone3GHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GHUD.m; sourceTree = "<group>"; };
+		83AB290019945A73000332A8 /* inclinometer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inclinometer.png; path = "../../app images/inclinometer.png"; sourceTree = "<group>"; };
+		83ABBEE318B8A4AF00EF0C7A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		83B4351A18E6946900E8C771 /* drone_main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = drone_main.m; path = ../drone_main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		83B4351C18E694BC00E8C771 /* Drone3GAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Drone3GAppDelegate.m; path = ../Drone3GAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		83BB0E2919F312A600019E30 /* main_yose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = main_yose.png; path = "../../app images/main_yose.png"; sourceTree = "<group>"; };
+		83BB0E2F19F347A300019E30 /* Drone3GProgressIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GProgressIndicator.h; sourceTree = "<group>"; };
+		83BB0E3019F347A300019E30 /* Drone3GProgressIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GProgressIndicator.m; sourceTree = "<group>"; };
+		83C3BB3719C68E5000D3B7F6 /* avcodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avcodec.h; sourceTree = "<group>"; };
+		83C3BB3819C68E5000D3B7F6 /* avfft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avfft.h; sourceTree = "<group>"; };
+		83C3BB3919C68E5000D3B7F6 /* dv_profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dv_profile.h; sourceTree = "<group>"; };
+		83C3BB3A19C68E5000D3B7F6 /* dxva2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dxva2.h; sourceTree = "<group>"; };
+		83C3BB3B19C68E5000D3B7F6 /* old_codec_ids.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = old_codec_ids.h; sourceTree = "<group>"; };
+		83C3BB3C19C68E5000D3B7F6 /* vaapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaapi.h; sourceTree = "<group>"; };
+		83C3BB3D19C68E5000D3B7F6 /* vda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vda.h; sourceTree = "<group>"; };
+		83C3BB3E19C68E5000D3B7F6 /* vdpau.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vdpau.h; sourceTree = "<group>"; };
+		83C3BB3F19C68E5000D3B7F6 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		83C3BB4019C68E5000D3B7F6 /* xvmc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xvmc.h; sourceTree = "<group>"; };
+		83C3BB4219C68E5000D3B7F6 /* avdevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avdevice.h; sourceTree = "<group>"; };
+		83C3BB4319C68E5000D3B7F6 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		83C3BB4519C68E5000D3B7F6 /* asrc_abuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asrc_abuffer.h; sourceTree = "<group>"; };
+		83C3BB4619C68E5000D3B7F6 /* avcodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avcodec.h; sourceTree = "<group>"; };
+		83C3BB4719C68E5000D3B7F6 /* avfilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avfilter.h; sourceTree = "<group>"; };
+		83C3BB4819C68E5000D3B7F6 /* avfiltergraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avfiltergraph.h; sourceTree = "<group>"; };
+		83C3BB4919C68E5000D3B7F6 /* buffersink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersink.h; sourceTree = "<group>"; };
+		83C3BB4A19C68E5000D3B7F6 /* buffersrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersrc.h; sourceTree = "<group>"; };
+		83C3BB4B19C68E5000D3B7F6 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		83C3BB4D19C68E5000D3B7F6 /* avformat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avformat.h; sourceTree = "<group>"; };
+		83C3BB4E19C68E5000D3B7F6 /* avio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avio.h; sourceTree = "<group>"; };
+		83C3BB4F19C68E5000D3B7F6 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		83C3BB5119C68E5000D3B7F6 /* avresample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avresample.h; sourceTree = "<group>"; };
+		83C3BB5219C68E5000D3B7F6 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		83C3BB5419C68E5000D3B7F6 /* adler32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = adler32.h; sourceTree = "<group>"; };
+		83C3BB5519C68E5000D3B7F6 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		83C3BB5619C68E5000D3B7F6 /* attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = attributes.h; sourceTree = "<group>"; };
+		83C3BB5719C68E5000D3B7F6 /* audio_fifo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audio_fifo.h; sourceTree = "<group>"; };
+		83C3BB5819C68E5000D3B7F6 /* audioconvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audioconvert.h; sourceTree = "<group>"; };
+		83C3BB5919C68E5000D3B7F6 /* avassert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avassert.h; sourceTree = "<group>"; };
+		83C3BB5A19C68E5000D3B7F6 /* avconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avconfig.h; sourceTree = "<group>"; };
+		83C3BB5B19C68E5000D3B7F6 /* avstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avstring.h; sourceTree = "<group>"; };
+		83C3BB5C19C68E5000D3B7F6 /* avutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avutil.h; sourceTree = "<group>"; };
+		83C3BB5D19C68E5000D3B7F6 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		83C3BB5E19C68E5000D3B7F6 /* blowfish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blowfish.h; sourceTree = "<group>"; };
+		83C3BB5F19C68E5000D3B7F6 /* bprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bprint.h; sourceTree = "<group>"; };
+		83C3BB6019C68E5000D3B7F6 /* bswap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bswap.h; sourceTree = "<group>"; };
+		83C3BB6119C68E5000D3B7F6 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		83C3BB6219C68E5000D3B7F6 /* channel_layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = channel_layout.h; sourceTree = "<group>"; };
+		83C3BB6319C68E5000D3B7F6 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		83C3BB6419C68E5000D3B7F6 /* cpu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu.h; sourceTree = "<group>"; };
+		83C3BB6519C68E5000D3B7F6 /* crc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crc.h; sourceTree = "<group>"; };
+		83C3BB6619C68E5000D3B7F6 /* dict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dict.h; sourceTree = "<group>"; };
+		83C3BB6719C68E5000D3B7F6 /* display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = display.h; sourceTree = "<group>"; };
+		83C3BB6819C68E5000D3B7F6 /* downmix_info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = downmix_info.h; sourceTree = "<group>"; };
+		83C3BB6919C68E5000D3B7F6 /* error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
+		83C3BB6A19C68E5000D3B7F6 /* eval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eval.h; sourceTree = "<group>"; };
+		83C3BB6B19C68E5000D3B7F6 /* ffversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffversion.h; sourceTree = "<group>"; };
+		83C3BB6C19C68E5000D3B7F6 /* fifo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fifo.h; sourceTree = "<group>"; };
+		83C3BB6D19C68E5000D3B7F6 /* file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = file.h; sourceTree = "<group>"; };
+		83C3BB6E19C68E5000D3B7F6 /* frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frame.h; sourceTree = "<group>"; };
+		83C3BB6F19C68E5000D3B7F6 /* hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
+		83C3BB7019C68E5000D3B7F6 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		83C3BB7119C68E5000D3B7F6 /* imgutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgutils.h; sourceTree = "<group>"; };
+		83C3BB7219C68E5000D3B7F6 /* intfloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intfloat.h; sourceTree = "<group>"; };
+		83C3BB7319C68E5000D3B7F6 /* intfloat_readwrite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intfloat_readwrite.h; sourceTree = "<group>"; };
+		83C3BB7419C68E5000D3B7F6 /* intreadwrite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intreadwrite.h; sourceTree = "<group>"; };
+		83C3BB7519C68E5000D3B7F6 /* lfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lfg.h; sourceTree = "<group>"; };
+		83C3BB7619C68E5000D3B7F6 /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		83C3BB7719C68E5000D3B7F6 /* lzo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzo.h; sourceTree = "<group>"; };
+		83C3BB7819C68E5000D3B7F6 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
+		83C3BB7919C68E5000D3B7F6 /* mathematics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mathematics.h; sourceTree = "<group>"; };
+		83C3BB7A19C68E5000D3B7F6 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		83C3BB7B19C68E5000D3B7F6 /* mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mem.h; sourceTree = "<group>"; };
+		83C3BB7C19C68E5000D3B7F6 /* motion_vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = motion_vector.h; sourceTree = "<group>"; };
+		83C3BB7D19C68E5000D3B7F6 /* murmur3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = murmur3.h; sourceTree = "<group>"; };
+		83C3BB7E19C68E5000D3B7F6 /* old_pix_fmts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = old_pix_fmts.h; sourceTree = "<group>"; };
+		83C3BB7F19C68E5000D3B7F6 /* opt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opt.h; sourceTree = "<group>"; };
+		83C3BB8019C68E5000D3B7F6 /* parseutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parseutils.h; sourceTree = "<group>"; };
+		83C3BB8119C68E5000D3B7F6 /* pixdesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pixdesc.h; sourceTree = "<group>"; };
+		83C3BB8219C68E5000D3B7F6 /* pixelutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pixelutils.h; sourceTree = "<group>"; };
+		83C3BB8319C68E5000D3B7F6 /* pixfmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pixfmt.h; sourceTree = "<group>"; };
+		83C3BB8419C68E5000D3B7F6 /* random_seed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = random_seed.h; sourceTree = "<group>"; };
+		83C3BB8519C68E5000D3B7F6 /* rational.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rational.h; sourceTree = "<group>"; };
+		83C3BB8619C68E5000D3B7F6 /* replaygain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = replaygain.h; sourceTree = "<group>"; };
+		83C3BB8719C68E5000D3B7F6 /* ripemd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ripemd.h; sourceTree = "<group>"; };
+		83C3BB8819C68E5000D3B7F6 /* samplefmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = samplefmt.h; sourceTree = "<group>"; };
+		83C3BB8919C68E5000D3B7F6 /* sha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha.h; sourceTree = "<group>"; };
+		83C3BB8A19C68E5000D3B7F6 /* sha512.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha512.h; sourceTree = "<group>"; };
+		83C3BB8B19C68E5000D3B7F6 /* stereo3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stereo3d.h; sourceTree = "<group>"; };
+		83C3BB8C19C68E5000D3B7F6 /* threadmessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = threadmessage.h; sourceTree = "<group>"; };
+		83C3BB8D19C68E5000D3B7F6 /* time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time.h; sourceTree = "<group>"; };
+		83C3BB8E19C68E5000D3B7F6 /* timecode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timecode.h; sourceTree = "<group>"; };
+		83C3BB8F19C68E5000D3B7F6 /* timestamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timestamp.h; sourceTree = "<group>"; };
+		83C3BB9019C68E5000D3B7F6 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		83C3BB9119C68E5000D3B7F6 /* xtea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xtea.h; sourceTree = "<group>"; };
+		83C3BB9319C68E5000D3B7F6 /* swresample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swresample.h; sourceTree = "<group>"; };
+		83C3BB9419C68E5000D3B7F6 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		83C3BB9619C68E5000D3B7F6 /* swscale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swscale.h; sourceTree = "<group>"; };
+		83C3BB9719C68E5000D3B7F6 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		83C3BB9819C68E7100D3B7F6 /* libavcodec.56.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libavcodec.56.dylib; sourceTree = "<group>"; };
+		83C3BB9D19C68E7100D3B7F6 /* libavdevice.56.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libavdevice.56.dylib; sourceTree = "<group>"; };
+		83C3BBA019C68E7100D3B7F6 /* libavfilter.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libavfilter.5.dylib; sourceTree = "<group>"; };
+		83C3BBA319C68E7100D3B7F6 /* libavformat.56.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libavformat.56.dylib; sourceTree = "<group>"; };
+		83C3BBA619C68E7100D3B7F6 /* libavresample.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libavresample.2.dylib; sourceTree = "<group>"; };
+		83C3BBA919C68E7100D3B7F6 /* libavutil.54.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libavutil.54.dylib; sourceTree = "<group>"; };
+		83C3BBAC19C68E7100D3B7F6 /* libswresample.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libswresample.1.dylib; sourceTree = "<group>"; };
+		83C3BBAF19C68E7100D3B7F6 /* libswscale.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libswscale.3.dylib; sourceTree = "<group>"; };
+		83C6AE561982D58800D3B009 /* install_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = install_splash.png; path = "../../app images/install_splash.png"; sourceTree = "<group>"; };
+		83C6AE581982D8EE00D3B009 /* radio_current.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = radio_current.png; path = "../../app images/radio_current.png"; sourceTree = "<group>"; };
+		83C6AE591982D8EE00D3B009 /* radio_distant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = radio_distant.png; path = "../../app images/radio_distant.png"; sourceTree = "<group>"; };
+		83C6AE5A1982D8EE00D3B009 /* radio_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = radio_next.png; path = "../../app images/radio_next.png"; sourceTree = "<group>"; };
+		83C6AE5E1982E15100D3B009 /* modem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = modem.png; path = "../../app images/modem.png"; sourceTree = "<group>"; };
+		83C6AE601982E28400D3B009 /* install_drone_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = install_drone_icon.png; path = "../../app images/install_drone_icon.png"; sourceTree = "<group>"; };
+		83C6AE651982E8B500D3B009 /* arbat2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arbat2.png; path = "../../app images/arbat2.png"; sourceTree = "<group>"; };
+		83C6AE671982EBF600D3B009 /* microsd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = microsd.png; path = "../../app images/microsd.png"; sourceTree = "<group>"; };
+		83C6AE691982EF6200D3B009 /* Drone3GProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GProgressView.h; sourceTree = "<group>"; };
+		83C6AE6A1982EF6200D3B009 /* Drone3GProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GProgressView.m; sourceTree = "<group>"; };
+		83C6AE6D1982FEC600D3B009 /* install_done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = install_done.png; path = "../../app images/install_done.png"; sourceTree = "<group>"; };
+		83C6AE6F198303BA00D3B009 /* burn complete.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = "burn complete.aif"; path = "../../app sounds/burn complete.aif"; sourceTree = "<group>"; };
+		83C7A16819B969E1004C33FC /* Drone3GWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GWindow.h; sourceTree = "<group>"; };
+		83C7A16919B969E1004C33FC /* Drone3GWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GWindow.m; sourceTree = "<group>"; };
+		83C7A16B19B96CD3004C33FC /* Drone3GLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GLoginView.h; sourceTree = "<group>"; };
+		83C7A16C19B96CD3004C33FC /* Drone3GLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GLoginView.m; sourceTree = "<group>"; };
+		83C819D4191723A00006097B /* HUD_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HUD_background.png; path = "../../app images/HUD_background.png"; sourceTree = "<group>"; };
+		83C819D5191723A00006097B /* HUD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HUD.png; path = "../../app images/HUD.png"; sourceTree = "<group>"; };
+		83C90B7A188DB7EB00619A09 /* drone_com.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = drone_com.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		83C90B7D188DBB3A00619A09 /* drone_main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drone_main.h; sourceTree = "<group>"; };
+		83CA2FD3199B265D006B6385 /* Drone3GTipGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GTipGenerator.h; sourceTree = "<group>"; };
+		83CA2FD4199B265D006B6385 /* Drone3GTipGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GTipGenerator.m; sourceTree = "<group>"; };
+		83CA300019A28920006B6385 /* NSData+AES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES256.h"; sourceTree = "<group>"; };
+		83CA300119A28920006B6385 /* NSData+AES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES256.m"; sourceTree = "<group>"; };
+		83CCC76018B8567600A27DD0 /* 3g_tower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3g_tower.png; sourceTree = "<group>"; };
+		83CCC76218B8568300A27DD0 /* controller.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = controller.png; path = "../../app images/controller.png"; sourceTree = "<group>"; };
+		83CD540619929D30004D1B79 /* record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = record.png; path = "../../app images/record.png"; sourceTree = "<group>"; };
+		83CD54081992CB34004D1B79 /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play_button.png; path = "../../app images/play_button.png"; sourceTree = "<group>"; };
+		83CFD12B198C38B200A64D44 /* photo_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = photo_splash.png; path = "../../app images/photo_splash.png"; sourceTree = "<group>"; };
+		83D0A947197B6B5A005181D5 /* Drone3GWindowMover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GWindowMover.h; sourceTree = "<group>"; };
+		83D0A948197B6B5A005181D5 /* Drone3GWindowMover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GWindowMover.m; sourceTree = "<group>"; };
+		83D164DA18E8EA8500EB83BC /* Drone3GPLANWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GPLANWindowController.h; sourceTree = "<group>"; };
+		83D164DB18E8EA8500EB83BC /* Drone3GPLANWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GPLANWindowController.m; sourceTree = "<group>"; };
+		83D164DC18E8EA8500EB83BC /* FlightPlanner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlightPlanner.xib; sourceTree = "<group>"; };
+		83D164E118E8ED3500EB83BC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		83D3362A18EE468C00F6FF76 /* joystickW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = joystickW.png; path = "../../app images/joystickW.png"; sourceTree = "<group>"; };
+		83D3362C18EE4CE500F6FF76 /* NSComboBoxExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSComboBoxExt.h; sourceTree = "<group>"; };
+		83D3362D18EE4CE500F6FF76 /* NSComboBoxExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSComboBoxExt.m; sourceTree = "<group>"; };
+		83D48BD71A5A4D99004BC862 /* Drone3GTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GTextView.h; sourceTree = "<group>"; };
+		83D48BD81A5A4D99004BC862 /* Drone3GTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GTextView.m; sourceTree = "<group>"; };
+		83D48BDA1A5A9A67004BC862 /* Drone3GScrollViewOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GScrollViewOverlay.h; sourceTree = "<group>"; };
+		83D48BDB1A5A9A67004BC862 /* Drone3GScrollViewOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GScrollViewOverlay.m; sourceTree = "<group>"; };
+		83D48BDD1A5D03E1004BC862 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = help.png; path = "../../app images/help.png"; sourceTree = "<group>"; };
+		83D48BE21A5D1E65004BC862 /* Drone3GHelpWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GHelpWindowController.h; sourceTree = "<group>"; };
+		83D48BE31A5D1E65004BC862 /* Drone3GHelpWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GHelpWindowController.m; sourceTree = "<group>"; };
+		83D48BE41A5D1E65004BC862 /* HelpWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpWindow.xib; sourceTree = "<group>"; };
+		83D48BE71A5D299B004BC862 /* Controller-Help.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = "Controller-Help.rtfd"; path = "../../Controller-Help.rtfd"; sourceTree = "<group>"; };
+		83D4AE911957B4DB00994A0D /* Drone3GMDCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GMDCalculator.h; sourceTree = "<group>"; };
+		83D4AE921957B4DB00994A0D /* Drone3GMDCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GMDCalculator.m; sourceTree = "<group>"; };
+		83D6A38B1890D3E3005B260C /* 3g1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3g1.png; sourceTree = "<group>"; };
+		83D6A38C1890D3E3005B260C /* 3g2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3g2.png; sourceTree = "<group>"; };
+		83D6A38D1890D3E3005B260C /* 3g3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3g3.png; sourceTree = "<group>"; };
+		83D6A38E1890D3E3005B260C /* 3g4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3g4.png; sourceTree = "<group>"; };
+		83D6F068188DB4B200830FD3 /* Drone3G.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drone3G.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83D6F06B188DB4B200830FD3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		83D6F06E188DB4B200830FD3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		83D6F06F188DB4B200830FD3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		83D6F070188DB4B200830FD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		83D6F073188DB4B200830FD3 /* Drone3G-Mac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Drone3G-Mac-Info.plist"; sourceTree = "<group>"; };
+		83D6F075188DB4B200830FD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		83D6F077188DB4B200830FD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83D6F079188DB4B200830FD3 /* Drone3G-Mac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Drone3G-Mac-Prefix.pch"; sourceTree = "<group>"; };
+		83D6F07D188DB4B200830FD3 /* Drone3GAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Drone3GAppDelegate.h; sourceTree = "<group>"; };
+		83D6F081188DB4B200830FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		83D6F083188DB4B200830FD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		83D6F089188DB4B200830FD3 /* Drone3G-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Drone3G-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83D6F08A188DB4B200830FD3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		83D6F091188DB4B200830FD3 /* Drone3G-MacTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Drone3G-MacTests-Info.plist"; sourceTree = "<group>"; };
+		83D6F093188DB4B200830FD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		83D6F095188DB4B300830FD3 /* Drone3G_MacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Drone3G_MacTests.m; sourceTree = "<group>"; };
+		83D6F09F188DB4CF00830FD3 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		83D734B4198F302E008CBB1F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		83D742F618D3FAED009D3C9F /* Drone3GPREFWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GPREFWindowController.h; sourceTree = "<group>"; };
+		83D742F718D3FAED009D3C9F /* Drone3GPREFWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Drone3GPREFWindowController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		83D742F818D3FAED009D3C9F /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
+		83DB77F718E91335007C1E62 /* map.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = map.html; sourceTree = "<group>"; };
+		83E0462F18DD1CAE003ADBCB /* joystick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = joystick.png; path = "../../app images/joystick.png"; sourceTree = "<group>"; };
+		83E0463318DD2795003ADBCB /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = "../../app images/home.png"; sourceTree = "<group>"; };
+		83E0463518DD2E67003ADBCB /* HUD_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HUD_icon.png; path = "../../app images/HUD_icon.png"; sourceTree = "<group>"; };
+		83E0463718DEA907003ADBCB /* controller_layout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = controller_layout.png; path = "../../app images/controller_layout.png"; sourceTree = "<group>"; };
+		83E0C9F81936B79B00D2CBC7 /* lost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lost.png; path = "../../app images/lost.png"; sourceTree = "<group>"; };
+		83F38EA81A44E88B00AC17E0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		83F4E83318DFDAF900C21F3C /* Drone3GControllerLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drone3GControllerLayoutView.h; sourceTree = "<group>"; };
+		83F4E83418DFDAF900C21F3C /* Drone3GControllerLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drone3GControllerLayoutView.m; sourceTree = "<group>"; };
+		83F7D72419A41ADE00BB9C9D /* Drone3G EULA.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = "Drone3G EULA.rtf"; path = "../../Drone3G EULA.rtf"; sourceTree = "<group>"; };
+		83F7D72819A518CD00BB9C9D /* Install-intro.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = "Install-intro.rtfd"; path = "../../Install-intro.rtfd"; sourceTree = "<group>"; };
+		83F7D73419A5D6C200BB9C9D /* Uninstall-intro.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = "Uninstall-intro.rtfd"; path = "../../Uninstall-intro.rtfd"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83D6F065188DB4B200830FD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83F38EA91A44E88B00AC17E0 /* Security.framework in Frameworks */,
+				83C3BBC119C68E7200D3B7F6 /* libavutil.54.dylib in Frameworks */,
+				83C3BBC719C68E7200D3B7F6 /* libswscale.3.dylib in Frameworks */,
+				837179231990062B00D745F9 /* CoreMedia.framework in Frameworks */,
+				83C3BBC419C68E7200D3B7F6 /* libswresample.1.dylib in Frameworks */,
+				83C3BBB019C68E7100D3B7F6 /* libavcodec.56.dylib in Frameworks */,
+				837179221990062600D745F9 /* AVFoundation.framework in Frameworks */,
+				834026F01978F82D00764B60 /* CoreServices.framework in Frameworks */,
+				83C3BBB819C68E7100D3B7F6 /* libavfilter.5.dylib in Frameworks */,
+				83D164E218E8ED3500EB83BC /* WebKit.framework in Frameworks */,
+				83ABBEE418B8A4AF00EF0C7A /* QuartzCore.framework in Frameworks */,
+				83C3BBBE19C68E7100D3B7F6 /* libavresample.2.dylib in Frameworks */,
+				831E9BF218A5BAC40085E86D /* OpenGL.framework in Frameworks */,
+				83D6F0A0188DB4CF00830FD3 /* SDL2.framework in Frameworks */,
+				83C3BBBB19C68E7100D3B7F6 /* libavformat.56.dylib in Frameworks */,
+				83D6F06C188DB4B200830FD3 /* Cocoa.framework in Frameworks */,
+				83C3BBB519C68E7100D3B7F6 /* libavdevice.56.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83D6F086188DB4B200830FD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83D6F08C188DB4B200830FD3 /* Cocoa.framework in Frameworks */,
+				83D6F08B188DB4B200830FD3 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		831FAB3E188E30BA00021F5E /* Cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				83CA2FD3199B265D006B6385 /* Drone3GTipGenerator.h */,
+				83CA2FD4199B265D006B6385 /* Drone3GTipGenerator.m */,
+				834026F11979961A00764B60 /* Rounded NSBox */,
+				834026E01978A96E00764B60 /* Category Additions */,
+				83429A3D198187A30043ED76 /* Menu  */,
+				83D4AE911957B4DB00994A0D /* Drone3GMDCalculator.h */,
+				83D4AE921957B4DB00994A0D /* Drone3GMDCalculator.m */,
+				83D6F07D188DB4B200830FD3 /* Drone3GAppDelegate.h */,
+				83B4351C18E694BC00E8C771 /* Drone3GAppDelegate.m */,
+				831E9BF318A5BD6F0085E86D /* Drone3GGLView.h */,
+				831E9BF418A5BD6F0085E86D /* Drone3GGLView.m */,
+				83AB28F9199436E6000332A8 /* Drone3GHUD.h */,
+				83AB28FA199436E6000332A8 /* Drone3GHUD.m */,
+				83BB0E2F19F347A300019E30 /* Drone3GProgressIndicator.h */,
+				83BB0E3019F347A300019E30 /* Drone3GProgressIndicator.m */,
+				83D6F080188DB4B200830FD3 /* MainMenu.xib */,
+				83E0467818DFA8AE003ADBCB /* Windows and Controllers */,
+			);
+			name = Cocoa;
+			sourceTree = "<group>";
+		};
+		831FAB3F188FBA7B00021F5E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				83932E6C1A5DDCB9005CC96E /* Help Images */,
+				83C6AE641982E2A400D3B009 /* Photo Viewer Images */,
+				83C6AE631982E29300D3B009 /* Main Menu Images */,
+				83C6AE621982E28800D3B009 /* Installer Images */,
+				83D2E97018F9E866007C1137 /* Home Map Marker */,
+				83D2E69F18F905B1007C1137 /* Drone Map Marker */,
+				83AB28FC199459F4000332A8 /* Preferences Images */,
+				83CD540619929D30004D1B79 /* record.png */,
+				83E0463318DD2795003ADBCB /* home.png */,
+				834F162918BC36A000BFE899 /* 3GTower.png */,
+				83CCC76218B8568300A27DD0 /* controller.png */,
+				83CCC76018B8567600A27DD0 /* 3g_tower.png */,
+				83D6A38B1890D3E3005B260C /* 3g1.png */,
+				83D6A38C1890D3E3005B260C /* 3g2.png */,
+				83D6A38D1890D3E3005B260C /* 3g3.png */,
+				83D6A38E1890D3E3005B260C /* 3g4.png */,
+				831FAB4618904BCB00021F5E /* battery.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		832E9D62198875490013AA3A /* Installer */ = {
+			isa = PBXGroup;
+			children = (
+				83429A5319822A080043ED76 /* Drone3GInstallerWindowController.h */,
+				83429A5419822A080043ED76 /* Drone3GInstallerWindowController.m */,
+				83429A5519822A080043ED76 /* Installer.xib */,
+			);
+			name = Installer;
+			sourceTree = "<group>";
+		};
+		832E9D63198875580013AA3A /* Uninstaller */ = {
+			isa = PBXGroup;
+			children = (
+				832E9D641988758C0013AA3A /* Drone3GUninstallerWindowController.h */,
+				832E9D651988758C0013AA3A /* Drone3GUninstallerWindowController.m */,
+				832E9D661988758C0013AA3A /* Uninstaller.xib */,
+			);
+			name = Uninstaller;
+			sourceTree = "<group>";
+		};
+		834026E01978A96E00764B60 /* Category Additions */ = {
+			isa = PBXGroup;
+			children = (
+				83CA300019A28920006B6385 /* NSData+AES256.h */,
+				83CA300119A28920006B6385 /* NSData+AES256.m */,
+				834026DB1977053600764B60 /* NSDateComponents+Additions.h */,
+				834026DC1977053600764B60 /* NSDateComponents+Additions.m */,
+				834026E11978AA0A00764B60 /* NSFileManager+Additions.h */,
+				834026E21978AA0A00764B60 /* NSFileManager+Additions.m */,
+			);
+			name = "Category Additions";
+			sourceTree = "<group>";
+		};
+		834026E41978BFB400764B60 /* Photo Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				83D0A947197B6B5A005181D5 /* Drone3GWindowMover.h */,
+				83D0A948197B6B5A005181D5 /* Drone3GWindowMover.m */,
+				834026F819799E1400764B60 /* Collection View Subclasses */,
+				834026E51978BFF400764B60 /* Drone3GPhotosWindowController.h */,
+				834026E61978BFF400764B60 /* Drone3GPhotosWindowController.m */,
+				834026E71978BFF400764B60 /* PhotoViewerWindow.xib */,
+			);
+			name = "Photo Viewer";
+			sourceTree = "<group>";
+		};
+		834026F11979961A00764B60 /* Rounded NSBox */ = {
+			isa = PBXGroup;
+			children = (
+				834026F21979965300764B60 /* Drone3GSelectionBox.h */,
+				834026F31979965300764B60 /* Drone3GSelectionBox.m */,
+			);
+			name = "Rounded NSBox";
+			sourceTree = "<group>";
+		};
+		834026F819799E1400764B60 /* Collection View Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				834026EA1978C4D500764B60 /* Drone3GPhoto.h */,
+				834026EB1978C4D500764B60 /* Drone3GPhoto.m */,
+				834026F51979984E00764B60 /* Drone3GPhotoController.h */,
+				834026F61979984E00764B60 /* Drone3GPhotoController.m */,
+				834026F919799E6600764B60 /* Drone3GCollectionView.h */,
+				834026FA19799E6600764B60 /* Drone3GCollectionView.m */,
+			);
+			name = "Collection View Subclasses";
+			sourceTree = "<group>";
+		};
+		83429A3D198187A30043ED76 /* Menu  */ = {
+			isa = PBXGroup;
+			children = (
+				83D48BDA1A5A9A67004BC862 /* Drone3GScrollViewOverlay.h */,
+				83D48BDB1A5A9A67004BC862 /* Drone3GScrollViewOverlay.m */,
+				83D48BD71A5A4D99004BC862 /* Drone3GTextView.h */,
+				83D48BD81A5A4D99004BC862 /* Drone3GTextView.m */,
+				839B90CD1A4DEA7B002102EB /* Drone3GCheckBox.h */,
+				839B90CE1A4DEA7B002102EB /* Drone3GCheckBox.m */,
+				83429A3E198187B90043ED76 /* Drone3GMenuButton.h */,
+				83429A3F198187B90043ED76 /* Drone3GMenuButton.m */,
+				83429A45198199EE0043ED76 /* Drone3GMenu.h */,
+				83429A46198199EE0043ED76 /* Drone3GMenu.m */,
+				83C7A16B19B96CD3004C33FC /* Drone3GLoginView.h */,
+				83C7A16C19B96CD3004C33FC /* Drone3GLoginView.m */,
+				83C7A16819B969E1004C33FC /* Drone3GWindow.h */,
+				83C7A16919B969E1004C33FC /* Drone3GWindow.m */,
+			);
+			name = "Menu ";
+			sourceTree = "<group>";
+		};
+		83429A4F198207BD0043ED76 /* Installer & Uninstaller */ = {
+			isa = PBXGroup;
+			children = (
+				83C6AE6C1982EF6700D3B009 /* Progress View */,
+				832E9D62198875490013AA3A /* Installer */,
+				832E9D63198875580013AA3A /* Uninstaller */,
+			);
+			name = "Installer & Uninstaller";
+			sourceTree = "<group>";
+		};
+		83932E6C1A5DDCB9005CC96E /* Help Images */ = {
+			isa = PBXGroup;
+			children = (
+				83932E711A5DE22A005CC96E /* help_media.png */,
+				83932E6F1A5DDEE0005CC96E /* help_modem.png */,
+				83932E6D1A5DDCD5005CC96E /* router.png */,
+				83D48BDD1A5D03E1004BC862 /* help.png */,
+			);
+			name = "Help Images";
+			sourceTree = "<group>";
+		};
+		83932E751A5F22B9005CC96E /* Manuals */ = {
+			isa = PBXGroup;
+			children = (
+				8363D4861A64EF61009F317F /* Media-Help.rtfd */,
+				83932E841A63115D005CC96E /* Proxy-Help.rtfd */,
+				83932E821A6213B1005CC96E /* Connection-Help.rtfd */,
+				83932E801A620351005CC96E /* Login-Help.rtfd */,
+				83932E7E1A5F5B78005CC96E /* Modem-Help.rtfd */,
+				83932E7A1A5F4455005CC96E /* Carrier-Help.rtfd */,
+				83932E781A5F2CAF005CC96E /* Forwarding-Help.rtfd */,
+				83932E731A5DF00B005CC96E /* Drone3G-Help.rtfd */,
+				83D48BE71A5D299B004BC862 /* Controller-Help.rtfd */,
+			);
+			name = Manuals;
+			sourceTree = "<group>";
+		};
+		83AB28FC199459F4000332A8 /* Preferences Images */ = {
+			isa = PBXGroup;
+			children = (
+				83AB28FF19945A2B000332A8 /* Connection Loss Preferences */,
+				83AB28FE19945A23000332A8 /* HUD Preferences */,
+				83AB28FD19945A17000332A8 /* Controller Preferences */,
+			);
+			name = "Preferences Images";
+			sourceTree = "<group>";
+		};
+		83AB28FD19945A17000332A8 /* Controller Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				83E0463718DEA907003ADBCB /* controller_layout.png */,
+				83D3362A18EE468C00F6FF76 /* joystickW.png */,
+				83E0462F18DD1CAE003ADBCB /* joystick.png */,
+			);
+			name = "Controller Preferences";
+			sourceTree = "<group>";
+		};
+		83AB28FE19945A23000332A8 /* HUD Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				83AB290019945A73000332A8 /* inclinometer.png */,
+				83E0463518DD2E67003ADBCB /* HUD_icon.png */,
+				83C819D4191723A00006097B /* HUD_background.png */,
+				83C819D5191723A00006097B /* HUD.png */,
+			);
+			name = "HUD Preferences";
+			sourceTree = "<group>";
+		};
+		83AB28FF19945A2B000332A8 /* Connection Loss Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				83E0C9F81936B79B00D2CBC7 /* lost.png */,
+			);
+			name = "Connection Loss Preferences";
+			sourceTree = "<group>";
+		};
+		83C3BB3419C68E2A00D3B7F6 /* FFmpeg */ = {
+			isa = PBXGroup;
+			children = (
+				83C3BB9819C68E7100D3B7F6 /* libavcodec.56.dylib */,
+				83C3BB9D19C68E7100D3B7F6 /* libavdevice.56.dylib */,
+				83C3BBA019C68E7100D3B7F6 /* libavfilter.5.dylib */,
+				83C3BBA319C68E7100D3B7F6 /* libavformat.56.dylib */,
+				83C3BBA619C68E7100D3B7F6 /* libavresample.2.dylib */,
+				83C3BBA919C68E7100D3B7F6 /* libavutil.54.dylib */,
+				83C3BBAC19C68E7100D3B7F6 /* libswresample.1.dylib */,
+				83C3BBAF19C68E7100D3B7F6 /* libswscale.3.dylib */,
+				83C3BB3519C68E5000D3B7F6 /* include */,
+			);
+			name = FFmpeg;
+			sourceTree = "<group>";
+		};
+		83C3BB3519C68E5000D3B7F6 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				83C3BB3619C68E5000D3B7F6 /* libavcodec */,
+				83C3BB4119C68E5000D3B7F6 /* libavdevice */,
+				83C3BB4419C68E5000D3B7F6 /* libavfilter */,
+				83C3BB4C19C68E5000D3B7F6 /* libavformat */,
+				83C3BB5019C68E5000D3B7F6 /* libavresample */,
+				83C3BB5319C68E5000D3B7F6 /* libavutil */,
+				83C3BB9219C68E5000D3B7F6 /* libswresample */,
+				83C3BB9519C68E5000D3B7F6 /* libswscale */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		83C3BB3619C68E5000D3B7F6 /* libavcodec */ = {
+			isa = PBXGroup;
+			children = (
+				83C3BB3719C68E5000D3B7F6 /* avcodec.h */,
+				83C3BB3819C68E5000D3B7F6 /* avfft.h */,
+				83C3BB3919C68E5000D3B7F6 /* dv_profile.h */,
+				83C3BB3A19C68E5000D3B7F6 /* dxva2.h */,
+				83C3BB3B19C68E5000D3B7F6 /* old_codec_ids.h */,
+				83C3BB3C19C68E5000D3B7F6 /* vaapi.h */,
+				83C3BB3D19C68E5000D3B7F6 /* vda.h */,
+				83C3BB3E19C68E5000D3B7F6 /* vdpau.h */,
+				83C3BB3F19C68E5000D3B7F6 /* version.h */,
+				83C3BB4019C68E5000D3B7F6 /* xvmc.h */,
+			);
+			path = libavcodec;
+			sourceTree = "<group>";
+		};
+		83C3BB4119C68E5000D3B7F6 /* libavdevice */ = {
+			isa = PBXGroup;
+			children = (
+				83C3BB4219C68E5000D3B7F6 /* avdevice.h */,
+				83C3BB4319C68E5000D3B7F6 /* version.h */,
+			);
+			path = libavdevice;
+			sourceTree = "<group>";
+		};
+		83C3BB4419C68E5000D3B7F6 /* libavfilter */ = {
+			isa = PBXGroup;
+			children = (
+				83C3BB4519C68E5000D3B7F6 /* asrc_abuffer.h */,
+				83C3BB4619C68E5000D3B7F6 /* avcodec.h */,
+				83C3BB4719C68E5000D3B7F6 /* avfilter.h */,
+				83C3BB4819C68E5000D3B7F6 /* avfiltergraph.h */,
+				83C3BB4919C68E5000D3B7F6 /* buffersink.h */,
+				83C3BB4A19C68E5000D3B7F6 /* buffersrc.h */,
+				83C3BB4B19C68E5000D3B7F6 /* version.h */,
+			);
+			path = libavfilter;
+			sourceTree = "<group>";
+		};
+		83C3BB4C19C68E5000D3B7F6 /* libavformat */ = {
+			isa = PBXGroup;
+			children = (
+				83C3BB4D19C68E5000D3B7F6 /* avformat.h */,
+				83C3BB4E19C68E5000D3B7F6 /* avio.h */,
+				83C3BB4F19C68E5000D3B7F6 /* version.h */,
+			);
+			path = libavformat;
+			sourceTree = "<group>";
+		};
+		83C3BB5019C68E5000D3B7F6 /* libavresample */ = {
+			isa = PBXGroup;
+			children = (
+				83C3BB5119C68E5000D3B7F6 /* avresample.h */,
+				83C3BB5219C68E5000D3B7F6 /* version.h */,
+			);
+			path = libavresample;
+			sourceTree = "<group>";
+		};
+		83C3BB5319C68E5000D3B7F6 /* libavutil */ = {
+			isa = PBXGroup;
+			children = (
+				83C3BB5419C68E5000D3B7F6 /* adler32.h */,
+				83C3BB5519C68E5000D3B7F6 /* aes.h */,
+				83C3BB5619C68E5000D3B7F6 /* attributes.h */,
+				83C3BB5719C68E5000D3B7F6 /* audio_fifo.h */,
+				83C3BB5819C68E5000D3B7F6 /* audioconvert.h */,
+				83C3BB5919C68E5000D3B7F6 /* avassert.h */,
+				83C3BB5A19C68E5000D3B7F6 /* avconfig.h */,
+				83C3BB5B19C68E5000D3B7F6 /* avstring.h */,
+				83C3BB5C19C68E5000D3B7F6 /* avutil.h */,
+				83C3BB5D19C68E5000D3B7F6 /* base64.h */,
+				83C3BB5E19C68E5000D3B7F6 /* blowfish.h */,
+				83C3BB5F19C68E5000D3B7F6 /* bprint.h */,
+				83C3BB6019C68E5000D3B7F6 /* bswap.h */,
+				83C3BB6119C68E5000D3B7F6 /* buffer.h */,
+				83C3BB6219C68E5000D3B7F6 /* channel_layout.h */,
+				83C3BB6319C68E5000D3B7F6 /* common.h */,
+				83C3BB6419C68E5000D3B7F6 /* cpu.h */,
+				83C3BB6519C68E5000D3B7F6 /* crc.h */,
+				83C3BB6619C68E5000D3B7F6 /* dict.h */,
+				83C3BB6719C68E5000D3B7F6 /* display.h */,
+				83C3BB6819C68E5000D3B7F6 /* downmix_info.h */,
+				83C3BB6919C68E5000D3B7F6 /* error.h */,
+				83C3BB6A19C68E5000D3B7F6 /* eval.h */,
+				83C3BB6B19C68E5000D3B7F6 /* ffversion.h */,
+				83C3BB6C19C68E5000D3B7F6 /* fifo.h */,
+				83C3BB6D19C68E5000D3B7F6 /* file.h */,
+				83C3BB6E19C68E5000D3B7F6 /* frame.h */,
+				83C3BB6F19C68E5000D3B7F6 /* hash.h */,
+				83C3BB7019C68E5000D3B7F6 /* hmac.h */,
+				83C3BB7119C68E5000D3B7F6 /* imgutils.h */,
+				83C3BB7219C68E5000D3B7F6 /* intfloat.h */,
+				83C3BB7319C68E5000D3B7F6 /* intfloat_readwrite.h */,
+				83C3BB7419C68E5000D3B7F6 /* intreadwrite.h */,
+				83C3BB7519C68E5000D3B7F6 /* lfg.h */,
+				83C3BB7619C68E5000D3B7F6 /* log.h */,
+				83C3BB7719C68E5000D3B7F6 /* lzo.h */,
+				83C3BB7819C68E5000D3B7F6 /* macros.h */,
+				83C3BB7919C68E5000D3B7F6 /* mathematics.h */,
+				83C3BB7A19C68E5000D3B7F6 /* md5.h */,
+				83C3BB7B19C68E5000D3B7F6 /* mem.h */,
+				83C3BB7C19C68E5000D3B7F6 /* motion_vector.h */,
+				83C3BB7D19C68E5000D3B7F6 /* murmur3.h */,
+				83C3BB7E19C68E5000D3B7F6 /* old_pix_fmts.h */,
+				83C3BB7F19C68E5000D3B7F6 /* opt.h */,
+				83C3BB8019C68E5000D3B7F6 /* parseutils.h */,
+				83C3BB8119C68E5000D3B7F6 /* pixdesc.h */,
+				83C3BB8219C68E5000D3B7F6 /* pixelutils.h */,
+				83C3BB8319C68E5000D3B7F6 /* pixfmt.h */,
+				83C3BB8419C68E5000D3B7F6 /* random_seed.h */,
+				83C3BB8519C68E5000D3B7F6 /* rational.h */,
+				83C3BB8619C68E5000D3B7F6 /* replaygain.h */,
+				83C3BB8719C68E5000D3B7F6 /* ripemd.h */,
+				83C3BB8819C68E5000D3B7F6 /* samplefmt.h */,
+				83C3BB8919C68E5000D3B7F6 /* sha.h */,
+				83C3BB8A19C68E5000D3B7F6 /* sha512.h */,
+				83C3BB8B19C68E5000D3B7F6 /* stereo3d.h */,
+				83C3BB8C19C68E5000D3B7F6 /* threadmessage.h */,
+				83C3BB8D19C68E5000D3B7F6 /* time.h */,
+				83C3BB8E19C68E5000D3B7F6 /* timecode.h */,
+				83C3BB8F19C68E5000D3B7F6 /* timestamp.h */,
+				83C3BB9019C68E5000D3B7F6 /* version.h */,
+				83C3BB9119C68E5000D3B7F6 /* xtea.h */,
+			);
+			path = libavutil;
+			sourceTree = "<group>";
+		};
+		83C3BB9219C68E5000D3B7F6 /* libswresample */ = {
+			isa = PBXGroup;
+			children = (
+				83C3BB9319C68E5000D3B7F6 /* swresample.h */,
+				83C3BB9419C68E5000D3B7F6 /* version.h */,
+			);
+			path = libswresample;
+			sourceTree = "<group>";
+		};
+		83C3BB9519C68E5000D3B7F6 /* libswscale */ = {
+			isa = PBXGroup;
+			children = (
+				83C3BB9619C68E5000D3B7F6 /* swscale.h */,
+				83C3BB9719C68E5000D3B7F6 /* version.h */,
+			);
+			path = libswscale;
+			sourceTree = "<group>";
+		};
+		83C6AE621982E28800D3B009 /* Installer Images */ = {
+			isa = PBXGroup;
+			children = (
+				832E9D601984703C0013AA3A /* connected.png */,
+				832E9D5B19843B560013AA3A /* wifi_icon.png */,
+				83C6AE6D1982FEC600D3B009 /* install_done.png */,
+				83C6AE671982EBF600D3B009 /* microsd.png */,
+				83C6AE651982E8B500D3B009 /* arbat2.png */,
+				83C6AE601982E28400D3B009 /* install_drone_icon.png */,
+				83C6AE5E1982E15100D3B009 /* modem.png */,
+				83C6AE581982D8EE00D3B009 /* radio_current.png */,
+				83C6AE591982D8EE00D3B009 /* radio_distant.png */,
+				83C6AE5A1982D8EE00D3B009 /* radio_next.png */,
+				83C6AE561982D58800D3B009 /* install_splash.png */,
+			);
+			name = "Installer Images";
+			sourceTree = "<group>";
+		};
+		83C6AE631982E29300D3B009 /* Main Menu Images */ = {
+			isa = PBXGroup;
+			children = (
+				83BB0E2919F312A600019E30 /* main_yose.png */,
+				83429A3B1980E1C10043ED76 /* main.png */,
+				837E046E1980652E004B86FA /* title.png */,
+			);
+			name = "Main Menu Images";
+			sourceTree = "<group>";
+		};
+		83C6AE641982E2A400D3B009 /* Photo Viewer Images */ = {
+			isa = PBXGroup;
+			children = (
+				83CD54081992CB34004D1B79 /* play_button.png */,
+				83CFD12B198C38B200A64D44 /* photo_splash.png */,
+				834026FC1979CA2000764B60 /* close_button.png */,
+			);
+			name = "Photo Viewer Images";
+			sourceTree = "<group>";
+		};
+		83C6AE6C1982EF6700D3B009 /* Progress View */ = {
+			isa = PBXGroup;
+			children = (
+				83C6AE691982EF6200D3B009 /* Drone3GProgressView.h */,
+				83C6AE6A1982EF6200D3B009 /* Drone3GProgressView.m */,
+			);
+			name = "Progress View";
+			sourceTree = "<group>";
+		};
+		83CA300519A2A64A006B6385 /* Install Image */ = {
+			isa = PBXGroup;
+			children = (
+				8384E5701A6CB9380089353E /* drone3g.install */,
+			);
+			name = "Install Image";
+			sourceTree = "<group>";
+		};
+		83CCC76418B8895800A27DD0 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				83C6AE6F198303BA00D3B009 /* burn complete.aif */,
+				83429A41198197B20043ED76 /* clickf.mp3 */,
+				83322E49197C7F4F00441890 /* pop2.mp3 */,
+				83322E45197C7D8800441890 /* away.mp3 */,
+				83322E46197C7D8800441890 /* back.mp3 */,
+				834026DE1977553000764B60 /* Grab.aif */,
+				8318AA41190C9AA40023FBAC /* beep_a.mp3 */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
+		83D164D918E8EA4300EB83BC /* Flight Planner */ = {
+			isa = PBXGroup;
+			children = (
+				83D164DA18E8EA8500EB83BC /* Drone3GPLANWindowController.h */,
+				83D164DB18E8EA8500EB83BC /* Drone3GPLANWindowController.m */,
+				83D164DC18E8EA8500EB83BC /* FlightPlanner.xib */,
+				83DB77F718E91335007C1E62 /* map.html */,
+			);
+			name = "Flight Planner";
+			sourceTree = "<group>";
+		};
+		83D2E69F18F905B1007C1137 /* Drone Map Marker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Drone Map Marker";
+			sourceTree = "<group>";
+		};
+		83D2E97018F9E866007C1137 /* Home Map Marker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Home Map Marker";
+			sourceTree = "<group>";
+		};
+		83D48BDF1A5D1CCF004BC862 /* Help Window */ = {
+			isa = PBXGroup;
+			children = (
+				83D48BE21A5D1E65004BC862 /* Drone3GHelpWindowController.h */,
+				83D48BE31A5D1E65004BC862 /* Drone3GHelpWindowController.m */,
+				83D48BE41A5D1E65004BC862 /* HelpWindow.xib */,
+			);
+			name = "Help Window";
+			sourceTree = "<group>";
+		};
+		83D6F05F188DB4B200830FD3 = {
+			isa = PBXGroup;
+			children = (
+				83D6F071188DB4B200830FD3 /* Drone3G-Mac */,
+				83D6F08F188DB4B200830FD3 /* Drone3G-MacTests */,
+				83D6F06A188DB4B200830FD3 /* Frameworks */,
+				83D6F069188DB4B200830FD3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83D6F069188DB4B200830FD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83D6F068188DB4B200830FD3 /* Drone3G.app */,
+				83D6F089188DB4B200830FD3 /* Drone3G-MacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83D6F06A188DB4B200830FD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83F38EA81A44E88B00AC17E0 /* Security.framework */,
+				8371791E198F335A00D745F9 /* CoreMedia.framework */,
+				83D734B4198F302E008CBB1F /* AVFoundation.framework */,
+				834026EF1978F82D00764B60 /* CoreServices.framework */,
+				83D164E118E8ED3500EB83BC /* WebKit.framework */,
+				83ABBEE318B8A4AF00EF0C7A /* QuartzCore.framework */,
+				831E9BF118A5BAC40085E86D /* OpenGL.framework */,
+				83D6F09F188DB4CF00830FD3 /* SDL2.framework */,
+				83D6F06B188DB4B200830FD3 /* Cocoa.framework */,
+				83D6F08A188DB4B200830FD3 /* XCTest.framework */,
+				83D6F06D188DB4B200830FD3 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83D6F06D188DB4B200830FD3 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83D6F06E188DB4B200830FD3 /* AppKit.framework */,
+				83D6F06F188DB4B200830FD3 /* CoreData.framework */,
+				83D6F070188DB4B200830FD3 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		83D6F071188DB4B200830FD3 /* Drone3G-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				83C3BB3419C68E2A00D3B7F6 /* FFmpeg */,
+				83CA300519A2A64A006B6385 /* Install Image */,
+				83CCC76418B8895800A27DD0 /* Sound */,
+				831FAB3F188FBA7B00021F5E /* Images */,
+				83C90B7A188DB7EB00619A09 /* drone_com.h */,
+				837075F218FE296900A5FAE4 /* drone_com.c */,
+				83C90B7D188DBB3A00619A09 /* drone_main.h */,
+				83B4351A18E6946900E8C771 /* drone_main.m */,
+				832E9D5F19843CF70013AA3A /* drone3g_installer.h */,
+				832E9D5D19843CE70013AA3A /* drone3g_installer.c */,
+				831FAB3E188E30BA00021F5E /* Cocoa */,
+				83D6F083188DB4B200830FD3 /* Images.xcassets */,
+				83D6F072188DB4B200830FD3 /* Supporting Files */,
+			);
+			path = "Drone3G-Mac";
+			sourceTree = "<group>";
+		};
+		83D6F072188DB4B200830FD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83932E751A5F22B9005CC96E /* Manuals */,
+				83F7D73419A5D6C200BB9C9D /* Uninstall-intro.rtfd */,
+				83F7D72819A518CD00BB9C9D /* Install-intro.rtfd */,
+				83F7D72419A41ADE00BB9C9D /* Drone3G EULA.rtf */,
+				83D6F073188DB4B200830FD3 /* Drone3G-Mac-Info.plist */,
+				83D6F074188DB4B200830FD3 /* InfoPlist.strings */,
+				83D6F077188DB4B200830FD3 /* main.m */,
+				83D6F079188DB4B200830FD3 /* Drone3G-Mac-Prefix.pch */,
+				836B373319AFBB8E00CB1021 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83D6F08F188DB4B200830FD3 /* Drone3G-MacTests */ = {
+			isa = PBXGroup;
+			children = (
+				83D6F095188DB4B300830FD3 /* Drone3G_MacTests.m */,
+				83D6F090188DB4B200830FD3 /* Supporting Files */,
+			);
+			path = "Drone3G-MacTests";
+			sourceTree = "<group>";
+		};
+		83D6F090188DB4B200830FD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83D6F091188DB4B200830FD3 /* Drone3G-MacTests-Info.plist */,
+				83D6F092188DB4B200830FD3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83DA12B818E0D2BF00DD4AE9 /* Data Usage Window */ = {
+			isa = PBXGroup;
+			children = (
+				83596FFD18BC1B9400FC5FEA /* Drone3GDATWindowController.h */,
+				83596FFE18BC1B9400FC5FEA /* Drone3GDATWindowController.m */,
+				83596FF818BC132C00FC5FEA /* DataUsageWindow.xib */,
+			);
+			name = "Data Usage Window";
+			sourceTree = "<group>";
+		};
+		83DA12B918E0D2C900DD4AE9 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				83DA12BA18E0D2D900DD4AE9 /* Controller View */,
+				83D742F618D3FAED009D3C9F /* Drone3GPREFWindowController.h */,
+				83D742F718D3FAED009D3C9F /* Drone3GPREFWindowController.m */,
+				83D742F818D3FAED009D3C9F /* PreferencesWindow.xib */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		83DA12BA18E0D2D900DD4AE9 /* Controller View */ = {
+			isa = PBXGroup;
+			children = (
+				83D3362C18EE4CE500F6FF76 /* NSComboBoxExt.h */,
+				83D3362D18EE4CE500F6FF76 /* NSComboBoxExt.m */,
+				83F4E83318DFDAF900C21F3C /* Drone3GControllerLayoutView.h */,
+				83F4E83418DFDAF900C21F3C /* Drone3GControllerLayoutView.m */,
+			);
+			name = "Controller View";
+			sourceTree = "<group>";
+		};
+		83E0467818DFA8AE003ADBCB /* Windows and Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				83D48BDF1A5D1CCF004BC862 /* Help Window */,
+				83429A4F198207BD0043ED76 /* Installer & Uninstaller */,
+				834026E41978BFB400764B60 /* Photo Viewer */,
+				83D164D918E8EA4300EB83BC /* Flight Planner */,
+				83DA12B818E0D2BF00DD4AE9 /* Data Usage Window */,
+				83DA12B918E0D2C900DD4AE9 /* Preferences */,
+			);
+			name = "Windows and Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83D6F067188DB4B200830FD3 /* Drone3G-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83D6F099188DB4B300830FD3 /* Build configuration list for PBXNativeTarget "Drone3G-Mac" */;
+			buildPhases = (
+				83D6F064188DB4B200830FD3 /* Sources */,
+				83D6F065188DB4B200830FD3 /* Frameworks */,
+				83D6F066188DB4B200830FD3 /* Resources */,
+				836FCD98189DC49C00EBC36E /* CopyFiles */,
+				83A631DD19C6403F00CB849A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Drone3G-Mac";
+			productName = "Drone3G-Mac";
+			productReference = 83D6F068188DB4B200830FD3 /* Drone3G.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83D6F088188DB4B200830FD3 /* Drone3G-MacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83D6F09C188DB4B300830FD3 /* Build configuration list for PBXNativeTarget "Drone3G-MacTests" */;
+			buildPhases = (
+				83D6F085188DB4B200830FD3 /* Sources */,
+				83D6F086188DB4B200830FD3 /* Frameworks */,
+				83D6F087188DB4B200830FD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83D6F08E188DB4B200830FD3 /* PBXTargetDependency */,
+			);
+			name = "Drone3G-MacTests";
+			productName = "Drone3G-MacTests";
+			productReference = 83D6F089188DB4B200830FD3 /* Drone3G-MacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83D6F060188DB4B200830FD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Chris Kinzel";
+				TargetAttributes = {
+					83D6F088188DB4B200830FD3 = {
+						TestTargetID = 83D6F067188DB4B200830FD3;
+					};
+				};
+			};
+			buildConfigurationList = 83D6F063188DB4B200830FD3 /* Build configuration list for PBXProject "Drone3G-Mac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83D6F05F188DB4B200830FD3;
+			productRefGroup = 83D6F069188DB4B200830FD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83D6F067188DB4B200830FD3 /* Drone3G-Mac */,
+				83D6F088188DB4B200830FD3 /* Drone3G-MacTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83D6F066188DB4B200830FD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83C6AE70198303BA00D3B009 /* burn complete.aif in Resources */,
+				83C819D7191723A00006097B /* HUD.png in Resources */,
+				83C819D6191723A00006097B /* HUD_background.png in Resources */,
+				83322E4A197C7F4F00441890 /* pop2.mp3 in Resources */,
+				83E0463018DD1CAE003ADBCB /* joystick.png in Resources */,
+				83D48BE61A5D1E65004BC862 /* HelpWindow.xib in Resources */,
+				83932E721A5DE22A005CC96E /* help_media.png in Resources */,
+				83D164DE18E8EA8500EB83BC /* FlightPlanner.xib in Resources */,
+				836B373419AFBB8E00CB1021 /* Credits.rtf in Resources */,
+				83932E791A5F2CAF005CC96E /* Forwarding-Help.rtfd in Resources */,
+				83E0463618DD2E67003ADBCB /* HUD_icon.png in Resources */,
+				83D6F076188DB4B200830FD3 /* InfoPlist.strings in Resources */,
+				83932E831A6213B1005CC96E /* Connection-Help.rtfd in Resources */,
+				83CFD12C198C38B200A64D44 /* photo_splash.png in Resources */,
+				834F162A18BC36A000BFE899 /* 3GTower.png in Resources */,
+				837E046F1980652E004B86FA /* title.png in Resources */,
+				832E9D681988758C0013AA3A /* Uninstaller.xib in Resources */,
+				831FAB4718904BCB00021F5E /* battery.png in Resources */,
+				834026DF1977553000764B60 /* Grab.aif in Resources */,
+				83C6AE5C1982D8EE00D3B009 /* radio_distant.png in Resources */,
+				83932E7F1A5F5B78005CC96E /* Modem-Help.rtfd in Resources */,
+				832E9D611984703C0013AA3A /* connected.png in Resources */,
+				83F7D72519A41ADE00BB9C9D /* Drone3G EULA.rtf in Resources */,
+				83D3362B18EE468C00F6FF76 /* joystickW.png in Resources */,
+				83F7D72919A518CD00BB9C9D /* Install-intro.rtfd in Resources */,
+				83E0463418DD2795003ADBCB /* home.png in Resources */,
+				83932E741A5DF00B005CC96E /* Drone3G-Help.rtfd in Resources */,
+				83F7D73519A5D6C200BB9C9D /* Uninstall-intro.rtfd in Resources */,
+				832E9D5C19843B560013AA3A /* wifi_icon.png in Resources */,
+				83C6AE681982EBF600D3B009 /* microsd.png in Resources */,
+				83932E701A5DDEE0005CC96E /* help_modem.png in Resources */,
+				8318AA42190C9AA40023FBAC /* beep_a.mp3 in Resources */,
+				834026E91978BFF400764B60 /* PhotoViewerWindow.xib in Resources */,
+				83D6A3911890D3E3005B260C /* 3g3.png in Resources */,
+				83D742FA18D3FAED009D3C9F /* PreferencesWindow.xib in Resources */,
+				83932E851A63115D005CC96E /* Proxy-Help.rtfd in Resources */,
+				83CCC76318B8568300A27DD0 /* controller.png in Resources */,
+				83CCC76118B8567600A27DD0 /* 3g_tower.png in Resources */,
+				83429A43198197B20043ED76 /* clickf.mp3 in Resources */,
+				83D6A3921890D3E3005B260C /* 3g4.png in Resources */,
+				83C6AE661982E8B500D3B009 /* arbat2.png in Resources */,
+				83D6A38F1890D3E3005B260C /* 3g1.png in Resources */,
+				83E0C9F91936B79B00D2CBC7 /* lost.png in Resources */,
+				83CD54091992CB34004D1B79 /* play_button.png in Resources */,
+				83429A3C1980E1C10043ED76 /* main.png in Resources */,
+				83AB290119945A73000332A8 /* inclinometer.png in Resources */,
+				83322E47197C7D8800441890 /* away.mp3 in Resources */,
+				83E0463818DEA907003ADBCB /* controller_layout.png in Resources */,
+				8384E5711A6CB9380089353E /* drone3g.install in Resources */,
+				83C6AE6E1982FEC600D3B009 /* install_done.png in Resources */,
+				83C6AE611982E28400D3B009 /* install_drone_icon.png in Resources */,
+				83D6F084188DB4B200830FD3 /* Images.xcassets in Resources */,
+				83932E6E1A5DDCD5005CC96E /* router.png in Resources */,
+				83C6AE5F1982E15100D3B009 /* modem.png in Resources */,
+				83D6A3901890D3E3005B260C /* 3g2.png in Resources */,
+				8363D4871A64EF61009F317F /* Media-Help.rtfd in Resources */,
+				83C6AE5D1982D8EE00D3B009 /* radio_next.png in Resources */,
+				83D48BDE1A5D03E1004BC862 /* help.png in Resources */,
+				83932E7B1A5F4455005CC96E /* Carrier-Help.rtfd in Resources */,
+				83D48BE81A5D299B004BC862 /* Controller-Help.rtfd in Resources */,
+				834026FD1979CA2000764B60 /* close_button.png in Resources */,
+				83CD540719929D30004D1B79 /* record.png in Resources */,
+				83C6AE571982D58800D3B009 /* install_splash.png in Resources */,
+				83DB77F818E91335007C1E62 /* map.html in Resources */,
+				83C6AE5B1982D8EE00D3B009 /* radio_current.png in Resources */,
+				83322E48197C7D8800441890 /* back.mp3 in Resources */,
+				83BB0E2A19F312A600019E30 /* main_yose.png in Resources */,
+				83D6F082188DB4B200830FD3 /* MainMenu.xib in Resources */,
+				83932E811A620351005CC96E /* Login-Help.rtfd in Resources */,
+				83596FF918BC132C00FC5FEA /* DataUsageWindow.xib in Resources */,
+				83429A5719822A080043ED76 /* Installer.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83D6F087188DB4B200830FD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83D6F094188DB4B200830FD3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83D6F064188DB4B200830FD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837075F318FE296900A5FAE4 /* drone_com.c in Sources */,
+				83C7A16D19B96CD3004C33FC /* Drone3GLoginView.m in Sources */,
+				832E9D671988758C0013AA3A /* Drone3GUninstallerWindowController.m in Sources */,
+				83429A5619822A080043ED76 /* Drone3GInstallerWindowController.m in Sources */,
+				834026F41979965300764B60 /* Drone3GSelectionBox.m in Sources */,
+				839B90CF1A4DEA7B002102EB /* Drone3GCheckBox.m in Sources */,
+				83D48BDC1A5A9A67004BC862 /* Drone3GScrollViewOverlay.m in Sources */,
+				832E9D5E19843CE70013AA3A /* drone3g_installer.c in Sources */,
+				83429A47198199EE0043ED76 /* Drone3GMenu.m in Sources */,
+				83596FFF18BC1B9400FC5FEA /* Drone3GDATWindowController.m in Sources */,
+				831E9BF518A5BD6F0085E86D /* Drone3GGLView.m in Sources */,
+				834026F71979984E00764B60 /* Drone3GPhotoController.m in Sources */,
+				83CA300219A28920006B6385 /* NSData+AES256.m in Sources */,
+				83429A40198187B90043ED76 /* Drone3GMenuButton.m in Sources */,
+				834026E31978AA0A00764B60 /* NSFileManager+Additions.m in Sources */,
+				83B4351B18E6946900E8C771 /* drone_main.m in Sources */,
+				83AB28FB199436E6000332A8 /* Drone3GHUD.m in Sources */,
+				83D742F918D3FAED009D3C9F /* Drone3GPREFWindowController.m in Sources */,
+				83D3362E18EE4CE500F6FF76 /* NSComboBoxExt.m in Sources */,
+				834026DD1977053600764B60 /* NSDateComponents+Additions.m in Sources */,
+				83D4AE931957B4DB00994A0D /* Drone3GMDCalculator.m in Sources */,
+				83B4351D18E694BC00E8C771 /* Drone3GAppDelegate.m in Sources */,
+				83D0A949197B6B5A005181D5 /* Drone3GWindowMover.m in Sources */,
+				83CA2FD5199B265D006B6385 /* Drone3GTipGenerator.m in Sources */,
+				83D48BE51A5D1E65004BC862 /* Drone3GHelpWindowController.m in Sources */,
+				83BB0E3119F347A300019E30 /* Drone3GProgressIndicator.m in Sources */,
+				83C6AE6B1982EF6200D3B009 /* Drone3GProgressView.m in Sources */,
+				83D164DD18E8EA8500EB83BC /* Drone3GPLANWindowController.m in Sources */,
+				83D6F078188DB4B200830FD3 /* main.m in Sources */,
+				83C7A16A19B969E1004C33FC /* Drone3GWindow.m in Sources */,
+				83F4E83518DFDAF900C21F3C /* Drone3GControllerLayoutView.m in Sources */,
+				83D48BD91A5A4D99004BC862 /* Drone3GTextView.m in Sources */,
+				834026FB19799E6600764B60 /* Drone3GCollectionView.m in Sources */,
+				834026E81978BFF400764B60 /* Drone3GPhotosWindowController.m in Sources */,
+				834026EC1978C4D500764B60 /* Drone3GPhoto.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83D6F085188DB4B200830FD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83D6F096188DB4B300830FD3 /* Drone3G_MacTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83D6F08E188DB4B200830FD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83D6F067188DB4B200830FD3 /* Drone3G-Mac */;
+			targetProxy = 83D6F08D188DB4B200830FD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		83D6F074188DB4B200830FD3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83D6F075188DB4B200830FD3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		83D6F080188DB4B200830FD3 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83D6F081188DB4B200830FD3 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		83D6F092188DB4B200830FD3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83D6F093188DB4B200830FD3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83D6F097188DB4B300830FD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		83D6F098188DB4B300830FD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		83D6F09A188DB4B300830FD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Drone3G-Mac/Drone3G-Mac-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				INFOPLIST_FILE = "Drone3G-Mac/Drone3G-Mac-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Drone3G-Mac",
+					"$(SDKROOT)/usr/lib/system",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = Drone3G;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "Drone3G-Mac/include/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		83D6F09B188DB4B300830FD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Drone3G-Mac/Drone3G-Mac-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				INFOPLIST_FILE = "Drone3G-Mac/Drone3G-Mac-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Drone3G-Mac",
+					"$(SDKROOT)/usr/lib/system",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = Drone3G;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "Drone3G-Mac/include/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		83D6F09D188DB4B300830FD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Drone3G.app/Contents/MacOS/Drone3G";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Drone3G-Mac/Drone3G-Mac-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Drone3G-MacTests/Drone3G-MacTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		83D6F09E188DB4B300830FD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Drone3G.app/Contents/MacOS/Drone3G";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Drone3G-Mac/Drone3G-Mac-Prefix.pch";
+				INFOPLIST_FILE = "Drone3G-MacTests/Drone3G-MacTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83D6F063188DB4B200830FD3 /* Build configuration list for PBXProject "Drone3G-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83D6F097188DB4B300830FD3 /* Debug */,
+				83D6F098188DB4B300830FD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83D6F099188DB4B300830FD3 /* Build configuration list for PBXNativeTarget "Drone3G-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83D6F09A188DB4B300830FD3 /* Debug */,
+				83D6F09B188DB4B300830FD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83D6F09C188DB4B300830FD3 /* Build configuration list for PBXNativeTarget "Drone3G-MacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83D6F09D188DB4B300830FD3 /* Debug */,
+				83D6F09E188DB4B300830FD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83D6F060188DB4B200830FD3 /* Project object */;
+}

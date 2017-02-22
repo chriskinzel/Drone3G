@@ -1,0 +1,1619 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="Drone3GPREFWindowController">
+            <connections>
+                <outlet property="carrierView" destination="471" id="522"/>
+                <outlet property="controllerView" destination="25" id="27"/>
+                <outlet property="flyHomeView" destination="31" id="32"/>
+                <outlet property="hudImageView" destination="372" id="378"/>
+                <outlet property="hudView" destination="29" id="30"/>
+                <outlet property="loginView" destination="585" id="611"/>
+                <outlet property="mainView" destination="79" id="80"/>
+                <outlet property="toolbar" destination="5" id="43"/>
+                <outlet property="warningLabel" destination="316" id="318"/>
+                <outlet property="window" destination="1" id="3"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="1">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <rect key="contentRect" x="196" y="240" width="787" height="400"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <view key="contentView" id="2">
+                <rect key="frame" x="0.0" y="0.0" width="787" height="400"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView id="79">
+                        <rect key="frame" x="0.0" y="0.0" width="787" height="400"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </customView>
+                </subviews>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="EFEC8C5A-3E0D-4C8E-BB16-E979B297024C" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="5">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="9"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="6"/>
+                    <toolbarItem implicitItemIdentifier="B3D6E178-7FA1-4CE8-87C0-B9889613C898" explicitItemIdentifier="Controllers" label="Controller                           " paletteLabel="Controller" image="joystick" selectable="YES" id="19">
+                        <connections>
+                            <action selector="switchView:" target="-2" id="76"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="D586545C-0BAD-460B-8EF3-F9CA35E9E4A6" explicitItemIdentifier="FlyingHome" label="Connection Loss                " paletteLabel="Flying Home" tag="1" image="lost" selectable="YES" id="20">
+                        <connections>
+                            <action selector="switchView:" target="-2" id="77"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="03C52E38-EF96-4DAA-B71D-7BC697C4782A" explicitItemIdentifier="HUD" label=" HUD                              " paletteLabel="HUD" tag="2" image="HUD_icon" selectable="YES" id="21">
+                        <connections>
+                            <action selector="switchView:" target="-2" id="78"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="C3655763-1ED6-4238-BA42-883CE442C9FD" explicitItemIdentifier="Carrier" label="Carrier Settings                        " paletteLabel="Carrier Settings" tag="3" image="3GTower" selectable="YES" id="469">
+                        <connections>
+                            <action selector="switchView:" target="-2" id="470"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="6B9A115F-0EB9-46F1-B531-EE1AC79FA381" explicitItemIdentifier="Login" label="Login Info                    " paletteLabel="Login Info" tag="4" image="NSUser" selectable="YES" id="582">
+                        <connections>
+                            <action selector="switchView:" target="-2" id="584"/>
+                        </connections>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="9"/>
+                    <toolbarItem reference="19"/>
+                    <toolbarItem reference="21"/>
+                    <toolbarItem reference="20"/>
+                    <toolbarItem reference="469"/>
+                    <toolbarItem reference="582"/>
+                    <toolbarItem reference="6"/>
+                    <toolbarItem reference="9"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <connections>
+                <outlet property="delegate" destination="-2" id="4"/>
+            </connections>
+            <point key="canvasLocation" x="444.5" y="629"/>
+        </window>
+        <customView wantsLayer="YES" id="25" userLabel="ControllerView">
+            <rect key="frame" x="0.0" y="0.0" width="787" height="542"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <box autoresizesSubviews="NO" title="Sensitivities" borderType="line" titlePosition="noTitle" id="235">
+                    <rect key="frame" x="-3" y="480" width="793" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" id="nPh-Vm-URz">
+                        <rect key="frame" x="1" y="1" width="791" height="62"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button hidden="YES" verticalHuggingPriority="750" id="249">
+                                <rect key="frame" x="337" y="-14" width="116" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="Restore Defaults" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="250">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="resetDefaultSliders:" target="-2" id="270"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="248">
+                                <rect key="frame" x="341" y="39" width="110" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Sensitivities" id="251">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <slider verticalHuggingPriority="750" tag="1" id="247">
+                                <rect key="frame" x="95" y="13" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="30" doubleValue="7.5" tickMarkPosition="above" sliderType="linear" id="252"/>
+                                <connections>
+                                    <action selector="sliderDidChange:" target="-2" id="299"/>
+                                </connections>
+                            </slider>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="246">
+                                <rect key="frame" x="17" y="14" width="81" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Pitch and Roll:" id="253">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="22" id="245">
+                                <rect key="frame" x="181" y="14" width="37" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="7.5˚" id="254">
+                                    <font key="font" metaFont="smallSystemBold"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <slider verticalHuggingPriority="750" tag="2" id="244">
+                                <rect key="frame" x="242" y="13" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="40" maxValue="350" doubleValue="80" tickMarkPosition="above" sliderType="linear" id="255"/>
+                                <connections>
+                                    <action selector="sliderDidChange:" target="-2" id="292"/>
+                                </connections>
+                            </slider>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="243">
+                                <rect key="frame" x="215" y="14" width="38" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Yaw:" id="256">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="23" id="242">
+                                <rect key="frame" x="329" y="14" width="51" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="80˚/s" id="257">
+                                    <font key="font" metaFont="smallSystemBold"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <slider verticalHuggingPriority="750" tag="3" id="241">
+                                <rect key="frame" x="417" y="13" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="200" maxValue="2000" doubleValue="1200" tickMarkPosition="above" sliderType="linear" id="258"/>
+                                <connections>
+                                    <action selector="sliderDidChange:" target="-2" id="293"/>
+                                </connections>
+                            </slider>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="240">
+                                <rect key="frame" x="378" y="14" width="44" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Ascent:" id="259">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="24" id="239">
+                                <rect key="frame" x="501" y="14" width="68" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="1200mm/s" id="260">
+                                    <font key="font" metaFont="smallSystemBold"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <slider verticalHuggingPriority="750" tag="4" id="238">
+                                <rect key="frame" x="625" y="13" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="200" maxValue="2000" doubleValue="900" tickMarkPosition="above" sliderType="linear" id="261"/>
+                                <connections>
+                                    <action selector="sliderDidChange:" target="-2" id="294"/>
+                                </connections>
+                            </slider>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="237">
+                                <rect key="frame" x="577" y="14" width="51" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Descent:" id="262">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="25" id="236">
+                                <rect key="frame" x="710" y="14" width="71" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="900mm/s" id="263">
+                                    <font key="font" metaFont="smallSystemBold"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="48">
+                    <rect key="frame" x="138" y="96" width="510" height="280"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="controller_layout" id="49"/>
+                </imageView>
+                <box autoresizesSubviews="NO" boxType="custom" borderType="line" titlePosition="noTitle" id="52">
+                    <rect key="frame" x="590" y="275" width="58" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" id="5Td-bl-iBb">
+                        <rect key="frame" x="1" y="1" width="56" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <box autoresizesSubviews="NO" boxType="custom" borderType="line" titlePosition="noTitle" id="64">
+                    <rect key="frame" x="557" y="248" width="99" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" id="jcQ-EC-x6N">
+                        <rect key="frame" x="1" y="1" width="97" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <box autoresizesSubviews="NO" boxType="custom" borderType="line" titlePosition="noTitle" id="60">
+                    <rect key="frame" x="552" y="303" width="79" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" id="Zyt-A6-O2K">
+                        <rect key="frame" x="1" y="1" width="77" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <box autoresizesSubviews="NO" boxType="custom" borderType="line" titlePosition="noTitle" id="67">
+                    <rect key="frame" x="136" y="278" width="69" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" id="DyW-TV-xmS">
+                        <rect key="frame" x="1" y="1" width="67" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <box autoresizesSubviews="NO" boxType="custom" borderType="line" titlePosition="noTitle" id="81">
+                    <rect key="frame" x="128" y="253" width="95" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" id="IfQ-Ue-0jh">
+                        <rect key="frame" x="1" y="1" width="93" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <comboBox verticalHuggingPriority="750" tag="10" id="58" customClass="NSComboBoxExt">
+                    <rect key="frame" x="643" y="263" width="109" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Land" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="59">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="275"/>
+                    </connections>
+                </comboBox>
+                <comboBox verticalHuggingPriority="750" tag="11" id="65" customClass="NSComboBoxExt">
+                    <rect key="frame" x="654" y="236" width="109" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Takeoff" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="66">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="276"/>
+                    </connections>
+                </comboBox>
+                <comboBox verticalHuggingPriority="750" tag="12" id="143" customClass="NSComboBoxExt">
+                    <rect key="frame" x="665" y="210" width="109" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Switch Camera" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="144">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="277"/>
+                    </connections>
+                </comboBox>
+                <comboBox verticalHuggingPriority="750" tag="9" id="62" customClass="NSComboBoxExt">
+                    <rect key="frame" x="632" y="292" width="109" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Emergency" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="63">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="274"/>
+                    </connections>
+                </comboBox>
+                <comboBox verticalHuggingPriority="750" tag="8" id="94" customClass="NSComboBoxExt">
+                    <rect key="frame" x="664" y="420" width="113" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Hover" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="95">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="273"/>
+                    </connections>
+                </comboBox>
+                <comboBox verticalHuggingPriority="750" tag="20" id="96" customClass="NSComboBoxExt">
+                    <rect key="frame" x="26" y="420" width="109" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="None" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="97">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="287"/>
+                    </connections>
+                </comboBox>
+                <comboBox verticalHuggingPriority="750" tag="14" id="90" customClass="NSComboBoxExt">
+                    <rect key="frame" x="351" y="92" width="109" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Fly Home" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="91">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="279"/>
+                    </connections>
+                </comboBox>
+                <comboBox verticalHuggingPriority="750" tag="18" id="68" customClass="NSComboBoxExt">
+                    <rect key="frame" x="32" y="268" width="109" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Read Latency" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="69">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                            <string>Read Latency</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="286"/>
+                    </connections>
+                </comboBox>
+                <comboBox verticalHuggingPriority="750" tag="17" id="83" customClass="NSComboBoxExt">
+                    <rect key="frame" x="24" y="244" width="109" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Set Home" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="84">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="284"/>
+                    </connections>
+                </comboBox>
+                <comboBox verticalHuggingPriority="750" tag="19" id="74" customClass="NSComboBoxExt">
+                    <rect key="frame" x="44" y="292" width="109" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Read Battery" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="75">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="285"/>
+                    </connections>
+                </comboBox>
+                <box autoresizesSubviews="NO" boxType="custom" borderType="line" titlePosition="noTitle" id="73">
+                    <rect key="frame" x="148" y="301" width="81" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" id="sb5-Xd-Mii">
+                        <rect key="frame" x="1" y="1" width="79" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <box autoresizesSubviews="NO" boxType="custom" borderType="line" titlePosition="noTitle" id="89">
+                    <rect key="frame" x="393" y="116" width="2" height="121"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" id="obK-Oq-gd2">
+                        <rect key="frame" x="1" y="1" width="0.0" height="119"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="98">
+                    <rect key="frame" x="156" y="434" width="20" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="L2" id="99">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="100">
+                    <rect key="frame" x="608" y="434" width="22" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="R2" id="101">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="102">
+                    <rect key="frame" x="604" y="393" width="30" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="R1" id="103">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="104">
+                    <rect key="frame" x="156" y="398" width="20" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="L1" id="105">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <comboBox verticalHuggingPriority="750" tag="7" id="106" customClass="NSComboBoxExt">
+                    <rect key="frame" x="664" y="384" width="113" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Take Picture" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="107">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="272"/>
+                    </connections>
+                </comboBox>
+                <comboBox verticalHuggingPriority="750" tag="21" id="108" customClass="NSComboBoxExt">
+                    <rect key="frame" x="26" y="384" width="109" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Record Video" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="109">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="288"/>
+                    </connections>
+                </comboBox>
+                <comboBox verticalHuggingPriority="750" tag="15" id="110" customClass="NSComboBoxExt">
+                    <rect key="frame" x="63" y="62" width="108" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Pitch and Roll" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="111">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>Pitch and Roll</string>
+                            <string>Yaw and Climb</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="282"/>
+                    </connections>
+                </comboBox>
+                <comboBox verticalHuggingPriority="750" tag="13" id="112" customClass="NSComboBoxExt">
+                    <rect key="frame" x="618" y="62" width="108" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Yaw and Climb" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="113">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>Pitch and Roll</string>
+                            <string>Yaw and Climb</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="278"/>
+                    </connections>
+                </comboBox>
+                <box autoresizesSubviews="NO" boxType="custom" borderType="line" titlePosition="noTitle" id="130">
+                    <rect key="frame" x="349" y="295" width="2" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" id="6f6-vg-fWJ">
+                        <rect key="frame" x="1" y="1" width="0.0" height="126"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <box autoresizesSubviews="NO" boxType="custom" borderType="line" titlePosition="noTitle" id="132">
+                    <rect key="frame" x="435" y="295" width="2" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" id="JuI-i4-ciW">
+                        <rect key="frame" x="1" y="1" width="0.0" height="126"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <comboBox verticalHuggingPriority="750" tag="5" id="133" customClass="NSComboBoxExt">
+                    <rect key="frame" x="292" y="423" width="108" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Compass Calib" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="134">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="281"/>
+                    </connections>
+                </comboBox>
+                <comboBox verticalHuggingPriority="750" tag="6" id="135" customClass="NSComboBoxExt">
+                    <rect key="frame" x="398" y="422" width="109" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Flat Trim" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="136">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="280"/>
+                    </connections>
+                </comboBox>
+                <comboBox verticalHuggingPriority="750" tag="16" id="150" customClass="NSComboBoxExt">
+                    <rect key="frame" x="20" y="214" width="105" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="None" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="151">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="283"/>
+                    </connections>
+                </comboBox>
+                <customView id="302" customClass="Drone3GControllerLayoutView">
+                    <rect key="frame" x="0.0" y="0.0" width="787" height="466"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <button hidden="YES" verticalHuggingPriority="750" id="128">
+                            <rect key="frame" x="329" y="18" width="126" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="squareTextured" title="Restore Defaults" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="129">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="systemBold"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="resetDefaultController:" target="-2" id="271"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </customView>
+                <comboBox verticalHuggingPriority="750" tag="26" id="308" customClass="NSComboBoxExt">
+                    <rect key="frame" x="63" y="32" width="114" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="None" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="309">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="310"/>
+                    </connections>
+                </comboBox>
+                <comboBox verticalHuggingPriority="750" tag="27" id="311" customClass="NSComboBoxExt">
+                    <rect key="frame" x="618" y="32" width="109" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="None" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="312">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>None</string>
+                            <string>Land</string>
+                            <string>Hover</string>
+                            <string>Takeoff</string>
+                            <string>Flat Trim</string>
+                            <string>Emergency</string>
+                            <string>Switch Camera</string>
+                            <string>Compass Calib</string>
+                            <string>Fly Home</string>
+                            <string>Read Battery</string>
+                            <string>Set Home</string>
+                            <string>Take Picture</string>
+                            <string>Record Video</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="comboBoxDidChange:" target="-2" id="313"/>
+                    </connections>
+                </comboBox>
+                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="303">
+                    <rect key="frame" x="0.0" y="482" width="3180" height="5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="316">
+                    <rect key="frame" x="278" y="459" width="228" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="No takeoff and landing buttons!" id="317">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="460">
+                    <rect key="frame" x="201" y="4" width="386" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="When using the Fly Home button the drone maintains its current altitude and does not land when it has reached its destination." id="461">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="633">
+                    <rect key="frame" x="729" y="452" width="25" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <contentFilters>
+                        <ciFilter name="CIFalseColor">
+                            <configuration>
+                                <ciColor key="inputColor0" red="1" green="1" blue="1" alpha="1"/>
+                                <ciColor key="inputColor1" red="1" green="0.0" blue="0.0" alpha="1"/>
+                                <null key="inputImage"/>
+                            </configuration>
+                        </ciFilter>
+                    </contentFilters>
+                    <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="634">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="showControllerHelp:" target="-2" id="636"/>
+                    </connections>
+                </button>
+            </subviews>
+        </customView>
+        <customView wantsLayer="YES" id="29" userLabel="HUDView">
+            <rect key="frame" x="0.0" y="0.0" width="787" height="531"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <box autoresizesSubviews="NO" borderType="line" id="356">
+                    <rect key="frame" x="57" y="93" width="672" height="408"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" id="0Xg-Vp-OK7">
+                        <rect key="frame" x="1" y="1" width="670" height="392"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" alphaValue="0.80000000000000004" tag="20" id="322">
+                    <rect key="frame" x="65" y="101" width="657" height="382"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="HUD_background" id="323"/>
+                </imageView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="372">
+                    <rect key="frame" x="65" y="109" width="656" height="368"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <contentFilters>
+                        <ciFilter name="CIFalseColor">
+                            <configuration>
+                                <ciColor key="inputColor0" red="0.00056703627342358232" green="1" blue="0.0" alpha="1"/>
+                                <ciColor key="inputColor1" red="0.0" green="1" blue="0.024477066472172737" alpha="1"/>
+                                <null key="inputImage"/>
+                            </configuration>
+                        </ciFilter>
+                    </contentFilters>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="HUD" id="373"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="338">
+                    <rect key="frame" x="106" y="62" width="68" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Altitude:" id="339">
+                        <font key="font" metaFont="systemBold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <matrix verticalHuggingPriority="750" tag="3" allowsEmptySelection="NO" autorecalculatesCellSize="YES" id="340">
+                    <rect key="frame" x="175" y="50" width="77" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    <size key="cellSize" width="71" height="18"/>
+                    <size key="intercellSpacing" width="4" height="2"/>
+                    <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="341">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <cells>
+                        <column>
+                            <buttonCell type="radio" title="Metric" imagePosition="left" alignment="left" tag="7" inset="2" id="342">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <buttonCell type="radio" title="Imperial" imagePosition="left" alignment="left" state="on" tag="8" inset="2" id="343">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </column>
+                    </cells>
+                    <connections>
+                        <action selector="unitsDidChange:" target="-2" id="367"/>
+                    </connections>
+                </matrix>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="344">
+                    <rect key="frame" x="326" y="62" width="54" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Speed:" id="349">
+                        <font key="font" metaFont="systemBold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <matrix verticalHuggingPriority="750" tag="4" allowsEmptySelection="NO" autorecalculatesCellSize="YES" id="345">
+                    <rect key="frame" x="382" y="50" width="77" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    <size key="cellSize" width="71" height="18"/>
+                    <size key="intercellSpacing" width="4" height="2"/>
+                    <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="348">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <cells>
+                        <column>
+                            <buttonCell type="radio" title="Metric" imagePosition="left" alignment="left" state="on" tag="9" inset="2" id="347">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <buttonCell type="radio" title="Imperial" imagePosition="left" alignment="left" tag="10" inset="2" id="346">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </column>
+                    </cells>
+                    <connections>
+                        <action selector="unitsDidChange:" target="-2" id="366"/>
+                    </connections>
+                </matrix>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="350">
+                    <rect key="frame" x="548" y="62" width="68" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Distance:" id="355">
+                        <font key="font" metaFont="systemBold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <matrix verticalHuggingPriority="750" tag="5" allowsEmptySelection="NO" autorecalculatesCellSize="YES" id="351">
+                    <rect key="frame" x="617" y="50" width="77" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    <size key="cellSize" width="71" height="18"/>
+                    <size key="intercellSpacing" width="4" height="2"/>
+                    <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="354">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <cells>
+                        <column>
+                            <buttonCell type="radio" title="Metric" imagePosition="left" alignment="left" state="on" tag="11" inset="2" id="353">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <buttonCell type="radio" title="Imperial" imagePosition="left" alignment="left" tag="12" inset="2" id="352">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </column>
+                    </cells>
+                    <connections>
+                        <action selector="unitsDidChange:" target="-2" id="365"/>
+                    </connections>
+                </matrix>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="357">
+                    <rect key="frame" x="405" y="17" width="49" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Color:" id="359">
+                        <font key="font" metaFont="systemBold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <colorWell tag="6" id="358">
+                    <rect key="frame" x="452" y="13" width="44" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <color key="color" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="colorSelected:" target="-2" id="360"/>
+                    </connections>
+                </colorWell>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="1" id="361">
+                    <rect key="frame" x="96" y="114" width="38" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="ft" id="362">
+                        <font key="font" metaFont="system" size="17"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.024477066530000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="2" id="363">
+                    <rect key="frame" x="663" y="109" width="54" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="km/h" id="364">
+                        <font key="font" metaFont="system" size="17"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.024477066530000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="11" id="374">
+                    <rect key="frame" x="357" y="441" width="73" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Distance: 0m" id="375">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="10" id="376">
+                    <rect key="frame" x="72" y="439" width="119" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Wind: 0.0 km/h" id="377">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="450">
+                    <rect key="frame" x="62" y="489" width="670" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="451">
+                        <font key="font" metaFont="smallSystemBold"/>
+                        <string key="title">Changes to units affect the entire application, for example changing the altitude units to metric will change both the altitude readout in the HUD and the fly home altitude units to meters.</string>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button tag="99" id="462">
+                    <rect key="frame" x="250" y="13" width="145" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Show inclinometer" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="463">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="systemBold" size="12"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="inclinometerStateDidChange:" target="-2" id="464"/>
+                    </connections>
+                </button>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" tag="100" id="465">
+                    <rect key="frame" x="251" y="251" width="284" height="98"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="inclinometer" id="466"/>
+                </imageView>
+            </subviews>
+        </customView>
+        <customView wantsLayer="YES" id="31" userLabel="FlyHomeView">
+            <rect key="frame" x="0.0" y="0.0" width="787" height="168"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="368">
+                    <rect key="frame" x="374" y="131" width="38" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="369">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <matrix verticalHuggingPriority="750" tag="7" allowsEmptySelection="NO" autorecalculatesCellSize="YES" id="383">
+                    <rect key="frame" x="164" y="-111" width="574" height="244"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    <size key="cellSize" width="574" height="122"/>
+                    <size key="intercellSpacing" width="4" height="0.0"/>
+                    <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="384">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <cells>
+                        <column>
+                            <buttonCell type="radio" title="Land after                seconds" imagePosition="left" alignment="left" state="on" inset="2" id="385">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <buttonCell type="radio" title="Take straightest path home at                feet after                seconds (requires GPS)" imagePosition="left" alignment="left" enabled="NO" tag="1" inset="2" id="386">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </column>
+                    </cells>
+                    <connections>
+                        <action selector="modeDidChange:" target="-2" id="439"/>
+                    </connections>
+                </matrix>
+                <textField verticalHuggingPriority="750" tag="1" id="391">
+                    <rect key="frame" x="249" y="61" width="45" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="25" drawsBackground="YES" id="392">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="landTimeoutDidChange:" target="-2" id="433"/>
+                    </connections>
+                </textField>
+                <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="2" id="393">
+                    <rect key="frame" x="292" y="58" width="19" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <stepperCell key="cell" continuous="YES" alignment="left" maxValue="1000" doubleValue="60" id="394"/>
+                    <connections>
+                        <action selector="landTimeoutDidChange:" target="-2" id="435"/>
+                    </connections>
+                </stepper>
+                <textField hidden="YES" verticalHuggingPriority="750" tag="3" id="399">
+                    <rect key="frame" x="376" y="-62" width="45" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="15" drawsBackground="YES" id="402">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="flyHomeAltitudeDidChange:" target="-2" id="442"/>
+                    </connections>
+                </textField>
+                <stepper hidden="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="4" id="400">
+                    <rect key="frame" x="419" y="-65" width="19" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <stepperCell key="cell" continuous="YES" alignment="left" minValue="15" maxValue="400" doubleValue="15" id="401"/>
+                    <connections>
+                        <action selector="flyHomeAltitudeDidChange:" target="-2" id="443"/>
+                    </connections>
+                </stepper>
+                <textField hidden="YES" verticalHuggingPriority="750" tag="5" id="403">
+                    <rect key="frame" x="499" y="-62" width="45" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="20" drawsBackground="YES" id="406">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="flyHomeTimeoutDidChange:" target="-2" id="440"/>
+                    </connections>
+                </textField>
+                <stepper hidden="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="6" id="404">
+                    <rect key="frame" x="542" y="-65" width="19" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <stepperCell key="cell" continuous="YES" alignment="left" maxValue="10000" doubleValue="20" id="405"/>
+                    <connections>
+                        <action selector="flyHomeTimeoutDidChange:" target="-2" id="441"/>
+                    </connections>
+                </stepper>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" tag="101" setsMaxLayoutWidthAtFirstLayout="YES" id="407">
+                    <rect key="frame" x="46" y="94" width="694" height="54"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="408">
+                        <font key="font" metaFont="systemBold" size="14"/>
+                        <string key="title">Here you can set how the drone will respond when connection is lost to the application. Please read all sections in red or with the label                 carefully as there is a risk of damage to persons, property and the drone if used incorrectly.</string>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="100" id="570">
+                    <rect key="frame" x="325" y="109" width="71" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="IMPORTANT:" id="571">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="1" green="0.14371280759999999" blue="0.2468194387" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="409">
+                    <rect key="frame" x="246" y="-4" width="452" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="410">
+                        <font key="font" metaFont="smallSystem"/>
+                        <string key="title">Due to the sensitive nature of landing it is recommended to set the waiting period no less than 25 seconds as there is a possibillity that the drone may land on people, property, water, etc... and a reconnect may be still be possible during this time.</string>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="415">
+                    <rect key="frame" x="246" y="-178" width="459" height="112"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="416">
+                        <font key="font" metaFont="smallSystem"/>
+                        <mutableString key="title">If you have a working GPS module installed on the drone then it is possible for the drone to utilize it to fly home itself when connection is lost. After the waiting period the drone will attempt to fly the straightest path to the home location at the altitude set above. Upon arrival the drone will proceed to land. Ensure the altitude is suffciently high enough to avoid colliding with obstacles in the return path. Also be aware of the fact that in the event of a fall or crash, higher altitudes can result in greater damage to the drone. The home location must have adequate space (no less than a radius of 10 meters in all directions) free of obstructions for landing.                                                                                                                                                                                                                             </mutableString>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="411">
+                    <rect key="frame" x="181" y="20" width="71" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="IMPORTANT:" id="412">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="1" green="0.14371280759999999" blue="0.2468194387" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="413">
+                    <rect key="frame" x="180" y="-124" width="71" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="IMPORTANT:" id="414">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="1" green="0.14371280759999999" blue="0.2468194387" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="417">
+                    <rect key="frame" x="246" y="-253" width="464" height="52"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="418">
+                        <font key="font" metaFont="system" size="10"/>
+                        <string key="title">NOTE: that the drone will be unable to avoid any obstructions in its path resulting in a potentially harmful crash for the drone and the obstruction it collided with. High winds speeds increase the probabillity of the drone crashing, do not use this feature when wind speeds exceed 10 km/h (6 mph). It is recommended to choose the land option instead.</string>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="421">
+                    <rect key="frame" x="246" y="-277" width="331" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="YOU HAVE BEEN WARNED, USE AT YOUR OWN RISK!" id="422">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="454">
+                    <rect key="frame" x="246" y="-29" width="452" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="455">
+                        <font key="font" metaFont="miniSystem"/>
+                        <string key="title">The drone will always default to landing unless explictly told otherwise. This means if you want the drone to fly home you must set the option every time you open Drone3G.</string>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="456">
+                    <rect key="frame" x="245" y="-207" width="528" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="By default the home location is set to your takeoff location or you can set it in the flight planner." id="457">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+        </customView>
+        <customView wantsLayer="YES" id="471" userLabel="CarrierView">
+            <rect key="frame" x="0.0" y="0.0" width="787" height="421"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="535">
+                    <rect key="frame" x="18" y="369" width="751" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" id="536">
+                        <font key="font" metaFont="systemBold" size="14"/>
+                        <string key="title">If your drone cannnot connect to the internet you may want to try and set the carrier settings manually.  Settings for most carriers can be found by searching online.</string>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" tag="1" id="537">
+                    <rect key="frame" x="359" y="4" width="69" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Sync" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="538">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="sync:" target="-2" id="562"/>
+                    </connections>
+                </button>
+                <box autoresizesSubviews="NO" borderType="line" id="539">
+                    <rect key="frame" x="265" y="199" width="257" height="143"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" id="qV2-Lt-PVm">
+                        <rect key="frame" x="1" y="1" width="255" height="127"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="6" id="523">
+                                <rect key="frame" x="55" y="92" width="69" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="APN:" id="524">
+                                    <font key="font" metaFont="systemBold" size="14"/>
+                                    <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" tag="2" id="525">
+                                <rect key="frame" x="97" y="95" width="130" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="526">
+                                    <font key="font" metaFont="titleBar" size="12"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="7" id="527">
+                                <rect key="frame" x="22" y="51" width="77" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Username:" id="530">
+                                    <font key="font" metaFont="systemBold" size="12"/>
+                                    <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" tag="3" id="528">
+                                <rect key="frame" x="97" y="54" width="130" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="529">
+                                    <font key="font" metaFont="titleBar" size="12"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="8" id="531">
+                                <rect key="frame" x="22" y="9" width="77" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Password:" id="534">
+                                    <font key="font" metaFont="systemBold" size="12"/>
+                                    <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" tag="4" id="532">
+                                <rect key="frame" x="97" y="14" width="130" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="533">
+                                    <font key="font" metaFont="titleBar" size="12"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="544">
+                    <rect key="frame" x="29" y="39" width="751" height="61"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="545">
+                        <font key="font" metaFont="systemBold"/>
+                        <string key="title">In order to synchronize your carrier settings with you ARDrone, you must connect your computer to its wifi network just as you did when installing. Once connected the sync button below will be enbaled. When you are ready, click the sync button and your carrier settings will be set. You should reboot your drone after syncing.</string>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="558">
+                    <rect key="frame" x="29" y="127" width="740" height="49"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="left" id="559">
+                        <font key="font" metaFont="smallSystemBold"/>
+                        <string key="title">NOTE: Some carriers have different APN's for their LTE networks, if that is the case then you must set the carrier settings manually to use LTE. Some carriers also have different APN's for different plan types (e.g. pay per month, pay as you go), it's imperative that you make sure you have the right APN for the right plan.</string>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button tag="5" id="563">
+                    <rect key="frame" x="279" y="338" width="228" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Set carrier settings automatically" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="564">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystemBold"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="changeCarrierSettingsMode:" target="-2" id="565"/>
+                    </connections>
+                </button>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="637">
+                    <rect key="frame" x="504" y="314" width="25" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <contentFilters>
+                        <ciFilter name="CIFalseColor">
+                            <configuration>
+                                <ciColor key="inputColor0" red="1" green="1" blue="1" alpha="1"/>
+                                <ciColor key="inputColor1" red="1" green="0.0" blue="0.0" alpha="1"/>
+                                <null key="inputImage"/>
+                            </configuration>
+                        </ciFilter>
+                    </contentFilters>
+                    <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="638">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="showCarrierHelp:" target="-2" id="640"/>
+                    </connections>
+                </button>
+            </subviews>
+        </customView>
+        <customView wantsLayer="YES" id="585" userLabel="LoginView">
+            <rect key="frame" x="0.0" y="0.0" width="787" height="421"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="591">
+                    <rect key="frame" x="18" y="354" width="751" height="54"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" id="592">
+                        <font key="font" metaFont="systemBold" size="14"/>
+                        <string key="title">Here you can change the login information used by your ARDrone. This is the login information you enter after clicking Fly in the main menu.</string>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" tag="1" id="590">
+                    <rect key="frame" x="359" y="4" width="69" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Sync" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="593">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="sendCredentials:" target="-2" id="612"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="588">
+                    <rect key="frame" x="24" y="35" width="751" height="67"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="606">
+                        <font key="font" metaFont="systemBold"/>
+                        <string key="title">In order to synchronize your login information with you ARDrone, you must connect your computer to its wifi network just as you did when installing. Once connected the sync button below will be enbaled. When you are ready, click the sync button and your login information will be set. You should reboot your drone after syncing.</string>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="587">
+                    <rect key="frame" x="29" y="307" width="740" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="left" id="607">
+                        <font key="font" metaFont="smallSystemBold"/>
+                        <string key="title">This login information is only used so that the drone can "find" your computer on the internet since most internet service providers use dynamic IP addressing for their customers. Pick something that is unique and hard to guess as anyone who has your login information can potentially fly your drone using Drone3G. There are no character restrictions on any of the fields, they can even be left blank (not recommended).</string>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box autoresizesSubviews="NO" borderType="line" id="613">
+                    <rect key="frame" x="240" y="114" width="306" height="203"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" id="gwq-Kv-rLW">
+                        <rect key="frame" x="1" y="1" width="304" height="187"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="6" id="619">
+                                <rect key="frame" x="112" y="157" width="80" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Username:" id="620">
+                                    <font key="font" metaFont="systemBold" size="14"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="6" id="626">
+                                <rect key="frame" x="112" y="96" width="80" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Password:" id="627">
+                                    <font key="font" metaFont="systemBold" size="14"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" tag="4" id="614">
+                                <rect key="frame" x="87" y="14" width="130" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="625">
+                                    <font key="font" metaFont="titleBar" size="12"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="6" id="628">
+                                <rect key="frame" x="106" y="32" width="95" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drone Name:" id="629">
+                                    <font key="font" metaFont="systemBold" size="14"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" tag="2" id="618">
+                                <rect key="frame" x="87" y="138" width="130" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="621">
+                                    <font key="font" metaFont="titleBar" size="12"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <secureTextField verticalHuggingPriority="750" tag="3" id="630">
+                                <rect key="frame" x="87" y="79" width="130" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="631">
+                                    <font key="font" size="12" name=".HelveticaNeueDeskInterface-Regular"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <allowedInputSourceLocales>
+                                        <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                    </allowedInputSourceLocales>
+                                </secureTextFieldCell>
+                            </secureTextField>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                </box>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="641">
+                    <rect key="frame" x="526" y="287" width="25" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <contentFilters>
+                        <ciFilter name="CIFalseColor">
+                            <configuration>
+                                <ciColor key="inputColor0" red="1" green="1" blue="1" alpha="1"/>
+                                <ciColor key="inputColor1" red="1" green="0.0" blue="0.0" alpha="1"/>
+                                <null key="inputImage"/>
+                            </configuration>
+                        </ciFilter>
+                    </contentFilters>
+                    <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="642">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="showLoginHelp:" target="-2" id="644"/>
+                    </connections>
+                </button>
+            </subviews>
+        </customView>
+    </objects>
+    <resources>
+        <image name="3GTower" width="68.400001525878906" height="79.199996948242188"/>
+        <image name="HUD" width="1280" height="800"/>
+        <image name="HUD_background" width="1280" height="800"/>
+        <image name="HUD_icon" width="67" height="63"/>
+        <image name="NSUser" width="32" height="32"/>
+        <image name="controller_layout" width="360" height="229"/>
+        <image name="inclinometer" width="539" height="51"/>
+        <image name="joystick" width="19.384614944458008" height="18.461538314819336"/>
+        <image name="lost" width="79.199996948242188" height="64.800003051757812"/>
+    </resources>
+</document>

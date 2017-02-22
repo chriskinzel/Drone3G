@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="Drone3GHelpWindowController">
+            <connections>
+                <outlet property="splashImage" destination="liz-Nc-1Q3" id="rsi-YF-FZN"/>
+                <outlet property="textView" destination="krc-j2-P3s" id="Yj6-Ii-lQ0"/>
+                <outlet property="toolbar" destination="9a8-5C-6V1" id="9CF-pb-uR7"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Drone3G Help" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="715" height="500"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="715" height="500"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" alphaValue="0.40000000000000013" id="liz-Nc-1Q3">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="500"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="install_splash" id="M8O-TB-5iA"/>
+                    </imageView>
+                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="pAb-4g-Ycf">
+                        <rect key="frame" x="-1" y="-1" width="717" height="502"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="5Dv-jg-dhV">
+                            <rect key="frame" x="1" y="1" width="238" height="133"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView editable="NO" drawsBackground="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="krc-j2-P3s">
+                                    <rect key="frame" x="0.0" y="0.0" width="715" height="500"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="715" height="500"/>
+                                    <size key="maxSize" width="824" height="10000000"/>
+                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <size key="minSize" width="715" height="500"/>
+                                    <size key="maxSize" width="824" height="10000000"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="P0f-7O-MQx">
+                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="24D-nI-rfb">
+                            <rect key="frame" x="700" y="1" width="16" height="500"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                </subviews>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="B380E3C4-0BAC-461F-9A12-600CE75F3B8A" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="9a8-5C-6V1">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="WxG-Kj-SSK"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="TZx-ZA-BVz"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="xTT-6c-UZB"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="Nqt-lh-8aQ"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="oE5-8t-hi7"/>
+                    <toolbarItem implicitItemIdentifier="AA93F850-7467-46FC-AC0F-2B83A6B067AB" label="Controller Help     " paletteLabel="Controller Help" tag="1" image="joystick" selectable="YES" id="X1O-yd-GMH">
+                        <connections>
+                            <action selector="showHelp:" target="-2" id="72Q-ch-Llx"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="09451B8C-3C60-4556-9089-B8E052B241ED" label="Login Info      " paletteLabel="Login Info" tag="7" image="NSUser" selectable="YES" id="gWe-fb-fGx">
+                        <connections>
+                            <action selector="showHelp:" target="-2" id="wJF-79-yAQ"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="3AFCC3C8-417D-4FA7-B57F-1B4D5B019392" label="Exporting Media     " paletteLabel="Exporting Media" tag="6" image="help_media" selectable="YES" id="0wl-NU-9HR">
+                        <connections>
+                            <action selector="showHelp:" target="-2" id="SGr-s9-jsQ"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="3D00CF92-2268-4CD1-BDAA-9290BE556344" label="Toolbar Item" paletteLabel="Toolbar Item" tag="-1" autovalidates="NO" id="oeE-gT-uHS"/>
+                    <toolbarItem implicitItemIdentifier="ECF4F18B-5104-4FA1-B15B-AA5C9B37D9DB" label="USB Modem     " paletteLabel="USB Modem" tag="5" image="help_modem" selectable="YES" id="mNS-5r-dfY">
+                        <connections>
+                            <action selector="showHelp:" target="-2" id="rU0-bV-nLC"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="6351391F-F867-434A-87A3-E3C88D25689F" label="Carrier Settings     " paletteLabel="Carrier Settings" tag="3" image="3GTower" selectable="YES" id="AE8-xk-cIv">
+                        <connections>
+                            <action selector="showHelp:" target="-2" id="Pg1-lj-fwO"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="BBEE0982-2FEC-434B-8EB1-47793627C1AA" label="Port Forwarding     " paletteLabel="Port Forwarding" tag="2" image="router" selectable="YES" id="ZZG-Sw-JtO">
+                        <connections>
+                            <action selector="showHelp:" target="-2" id="49j-DN-OBz"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="83B07365-882B-4107-B7F7-CF60D3F722E1" label="Relay Info     " paletteLabel="Proxy Info" tag="4" image="NSNetwork" selectable="YES" id="row-WG-NNo">
+                        <connections>
+                            <action selector="showHelp:" target="-2" id="VHR-90-btS"/>
+                        </connections>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="X1O-yd-GMH"/>
+                    <toolbarItem reference="ZZG-Sw-JtO"/>
+                    <toolbarItem reference="AE8-xk-cIv"/>
+                    <toolbarItem reference="row-WG-NNo"/>
+                    <toolbarItem reference="mNS-5r-dfY"/>
+                    <toolbarItem reference="0wl-NU-9HR"/>
+                    <toolbarItem reference="gWe-fb-fGx"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="358.5" y="79"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="3GTower" width="68.400001525878906" height="79.199996948242188"/>
+        <image name="NSNetwork" width="32" height="32"/>
+        <image name="NSUser" width="32" height="32"/>
+        <image name="help_media" width="128" height="128"/>
+        <image name="help_modem" width="96" height="96"/>
+        <image name="install_splash" width="630" height="161"/>
+        <image name="joystick" width="19.384614944458008" height="18.461538314819336"/>
+        <image name="router" width="42" height="36"/>
+    </resources>
+</document>

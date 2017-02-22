@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="494" id="495"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <menu title="AMainMenu" systemMenu="main" id="29">
+            <items>
+                <menuItem title="Drone3G" id="56">
+                    <menu key="submenu" title="Drone3G" systemMenu="apple" id="57">
+                        <items>
+                            <menuItem title="About Drone3G" id="58">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="236">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Preferences…" keyEquivalent="," id="129">
+                                <connections>
+                                    <action selector="openPreferences:" target="494" id="8ph-XP-uny"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="143">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Services" id="131">
+                                <menu key="submenu" title="Services" systemMenu="services" id="130"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="144">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Hide Drone3G" keyEquivalent="h" id="134">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="367"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="145">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="368"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show Main Window" keyEquivalent="w" id="0Z2-7C-RW3">
+                                <connections>
+                                    <action selector="makeKeyAndOrderFront:" target="371" id="n4Y-Af-Q9h"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="150">
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="370"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="149">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Enter Full Screen" keyEquivalent="f" id="jMZ-oo-bjQ">
+                                <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                <connections>
+                                    <action selector="toggleFullScreen:" target="371" id="dzS-TL-U1Q"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="bTQ-9A-4Di">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Quit Drone3G" keyEquivalent="q" id="136">
+                                <connections>
+                                    <action selector="terminate:" target="-3" id="449"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Video Quality" id="GXi-no-i0F">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Video Quality" autoenablesItems="NO" id="wpi-aw-ZLU">
+                        <items>
+                            <menuItem title="SD - Standard Definition (360p)" enabled="NO" id="xtY-Fm-BxR">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="use360pVideo:" target="494" id="sDz-hE-X1k"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="HD - High Definition (720p)" enabled="NO" id="IP1-AG-wdw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="use720pVideo:" target="494" id="HoD-yM-YP4"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="rAw-fq-mBt"/>
+                            <menuItem title="Bitrate" id="OTA-A8-xgr">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Slider" id="wCt-yh-PgD">
+                                <attributedString key="attributedTitle"/>
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Data Usage" id="AsI-X2-IZy">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Data Usage" autoenablesItems="NO" id="PdE-4e-4Km">
+                        <items>
+                            <menuItem title="Check Data Usage..." enabled="NO" keyEquivalent="3" id="Bhg-FR-aIJ">
+                                <connections>
+                                    <action selector="checkDataUsage:" target="494" id="jFr-SK-pIK"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Sensitivities" id="l3Q-C9-kZP">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Sensitivities" autoenablesItems="NO" id="ZzL-AZ-Hzl">
+                        <items>
+                            <menuItem title="Sensitivities Custom View" id="aUo-7h-xDG">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                        </items>
+                        <connections>
+                            <outlet property="delegate" destination="494" id="ZCM-GW-BKA"/>
+                        </connections>
+                    </menu>
+                </menuItem>
+                <menuItem title="Photos &amp; Videos" id="GjD-gd-lc1">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Photos &amp; Videos" autoenablesItems="NO" id="x7A-of-Lxd">
+                        <items>
+                            <menuItem title="Record video to MicroSD" hidden="YES" enabled="NO" id="kly-lE-8kP">
+                                <attributedString key="attributedTitle"/>
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="changeRecordingMode:" target="494" id="l5T-XE-4b4"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="View photos &amp; video..." keyEquivalent="1" id="vRv-Nj-O5f">
+                                <connections>
+                                    <action selector="showPhotos:" target="494" id="HUE-ft-S11"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="How to export media..." id="9fc-4m-ade">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="showExportHelp:" target="494" id="ieW-5e-oSZ"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Flight Map" hidden="YES" id="VJM-QT-AxE">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Flight Map" autoenablesItems="NO" id="2B0-Dq-Jbl">
+                        <items>
+                            <menuItem title="Open Flight Map..." keyEquivalent="2" id="XmG-EE-Gbk">
+                                <connections>
+                                    <action selector="openFlightPlanner:" target="494" id="dFk-B6-aB2"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Help" id="Yca-ue-6Mc">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Help" autoenablesItems="NO" id="MIo-G7-k9Y">
+                        <items>
+                            <menuItem title="Show help..." keyEquivalent="h" id="PPc-wJ-5Mx">
+                                <connections>
+                                    <action selector="openHelp:" target="494" id="f8W-KV-ig0"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="zXY-lL-aCQ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="Drone3G" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
+            <rect key="contentRect" x="317" y="229" width="640" height="360"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
+            <value key="minSize" type="size" width="533" height="325"/>
+            <view key="contentView" id="372">
+                <rect key="frame" x="0.0" y="0.0" width="640" height="360"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <openGLView colorSize="8bit_RGB" useAuxiliaryDepthBufferStencil="NO" allowOffline="YES" id="40S-Lt-FDt" customClass="Drone3GGLView">
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="360"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </openGLView>
+                </subviews>
+                <animations/>
+            </view>
+        </window>
+        <customObject id="494" customClass="Drone3GAppDelegate">
+            <connections>
+                <outlet property="HUDView" destination="YyP-UI-Uxo" id="GTE-VJ-fXe"/>
+                <outlet property="altitudeLabel" destination="GLD-Zj-gDd" id="Kbn-1N-gIq"/>
+                <outlet property="angleLabel" destination="fbc-Qw-8A7" id="Kos-V6-oIj"/>
+                <outlet property="batteryImageView" destination="QAS-pL-3JK" id="r79-tP-6Mf"/>
+                <outlet property="batteryLabel" destination="Pwc-Mj-lJj" id="MsO-oV-f3M"/>
+                <outlet property="bitrateLabel" destination="VgR-tx-GxE" id="hJR-QR-Yze"/>
+                <outlet property="bitrateMenuItem" destination="OTA-A8-xgr" id="Max-2Y-BcO"/>
+                <outlet property="bitrateSlider" destination="M8T-2E-sBu" id="A8q-Xz-TPI"/>
+                <outlet property="connectionLabel" destination="3rR-2k-C2e" id="peC-s7-h7O"/>
+                <outlet property="controllerImageView" destination="Mxl-aN-XAP" id="dWn-ao-Zcq"/>
+                <outlet property="dataUsageMenuItem" destination="Bhg-FR-aIJ" id="sxm-uD-s0f"/>
+                <outlet property="directionLabel" destination="Lvy-a2-Y8l" id="vK1-pV-Uco"/>
+                <outlet property="distanceLabel" destination="OSS-Lo-0mI" id="MlZ-lW-UrG"/>
+                <outlet property="drone3GGLView" destination="40S-Lt-FDt" id="R44-cr-hDU"/>
+                <outlet property="eastAngleLabel" destination="ubI-JT-jlS" id="1Do-CW-yn2"/>
+                <outlet property="eastLabel" destination="8vX-aV-JGz" id="tLk-HC-gAS"/>
+                <outlet property="flightPlanMenuItem" destination="XmG-EE-Gbk" id="iaE-Jz-Pka"/>
+                <outlet property="gpsLabel" destination="82t-n4-ehF" id="IcP-cm-X03"/>
+                <outlet property="hdMenuItem" destination="IP1-AG-wdw" id="ShK-pq-PlW"/>
+                <outlet property="helpButton" destination="qIu-Mw-T7r" id="IpF-j9-9vT"/>
+                <outlet property="homeAngleLabel" destination="lxu-Zx-3KB" id="0RR-F6-fdv"/>
+                <outlet property="homeImage" destination="iL2-xC-FpS" id="i4T-OM-pYv"/>
+                <outlet property="loginView" destination="yh7-BB-bmP" id="aFp-9Y-bya"/>
+                <outlet property="mainView" destination="pgo-t4-gnl" id="7El-Sm-59B"/>
+                <outlet property="northAngleLabel" destination="LGz-rG-Uuy" id="8uA-3M-89K"/>
+                <outlet property="northLabel" destination="sGp-Wb-tmT" id="9CE-5c-v9z"/>
+                <outlet property="proxyCheckBox" destination="cFD-TA-LMD" id="jtI-Ww-8SJ"/>
+                <outlet property="proxyLogView" destination="ZMs-Po-V1h" id="WfA-hf-kkt"/>
+                <outlet property="recordMenuItem" destination="kly-lE-8kP" id="1lb-jg-h3b"/>
+                <outlet property="recordingIndicator" destination="iTl-xX-vp6" id="rTC-or-SW3"/>
+                <outlet property="sdMenuItem" destination="xtY-Fm-BxR" id="RbM-ZK-P7q"/>
+                <outlet property="sensitivityMenuItem" destination="aUo-7h-xDG" id="XEf-hE-xPe"/>
+                <outlet property="sensitivityView" destination="vab-xt-vhu" id="mCL-5r-OqM"/>
+                <outlet property="signalIconImageView" destination="ojW-S7-uBu" id="iv7-pN-bAd"/>
+                <outlet property="signalLevelImageView" destination="6fQ-h1-CQ6" id="dUq-kw-drQ"/>
+                <outlet property="sliderMenuItem" destination="wCt-yh-PgD" id="la6-jB-nEP"/>
+                <outlet property="southAngleLabel" destination="M4p-xh-Hft" id="vrg-nI-FxT"/>
+                <outlet property="southLabel" destination="0FH-IP-Bsj" id="Vij-AP-xJu"/>
+                <outlet property="spinnerView" destination="ufe-7n-wnc" id="rwU-24-mlb"/>
+                <outlet property="timeFlyingLabel" destination="cIC-La-ctk" id="vbX-of-FE1"/>
+                <outlet property="tipLabel" destination="edc-zY-ALb" id="Ghp-wQ-oHd"/>
+                <outlet property="velocityLabel" destination="rzJ-qf-IKU" id="R6C-wl-Q8Q"/>
+                <outlet property="warningLabel" destination="smi-hd-xDd" id="3yJ-5U-eZy"/>
+                <outlet property="westAngleLabel" destination="X1F-oD-vQH" id="PGq-Fz-pew"/>
+                <outlet property="westLabel" destination="bkD-FE-qD6" id="sc5-WA-Ab5"/>
+                <outlet property="windSpeedLabel" destination="9uX-Vz-SEh" id="q12-X5-JkQ"/>
+                <outlet property="window" destination="371" id="532"/>
+            </connections>
+        </customObject>
+        <customObject id="420" customClass="NSFontManager"/>
+        <menu title="Data Usage" id="dUJ-kc-WlD">
+            <items>
+                <menuItem title="Check Data Usage..." id="MWe-2b-a2w">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+            </items>
+        </menu>
+        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="VgR-tx-GxE">
+            <rect key="frame" x="0.0" y="0.0" width="183" height="17"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="                Bitrate: 500Kbps" id="6HN-vn-dCg">
+                <font key="font" metaFont="system"/>
+                <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+            </textFieldCell>
+        </textField>
+        <customView id="M8T-2E-sBu" userLabel="Bitrate Slider View">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="28"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box autoresizesSubviews="NO" title="Box" boxType="custom" borderType="line" id="RMK-B0-o9m">
+                    <rect key="frame" x="67" y="0.0" width="1" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" red="1" green="0.0" blue="0.0" alpha="0.41999999999999998" colorSpace="calibratedRGB"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <box autoresizesSubviews="NO" title="Box" boxType="custom" borderType="line" id="Po9-6p-sbr">
+                    <rect key="frame" x="27" y="0.0" width="1" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" red="1" green="0.0" blue="0.0" alpha="0.41999999999999998" colorSpace="calibratedRGB"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <slider verticalHuggingPriority="750" tag="1" id="p0q-I1-Is2">
+                    <rect key="frame" x="18" y="-1" width="220" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <sliderCell key="cell" continuous="YES" enabled="NO" state="on" alignment="left" minValue="250" maxValue="4000" doubleValue="500" tickMarkPosition="above" numberOfTickMarks="6" sliderType="linear" id="cRB-NR-VyX"/>
+                    <connections>
+                        <action selector="changeBitrate:" target="494" id="czu-cg-lv9"/>
+                    </connections>
+                </slider>
+            </subviews>
+        </customView>
+        <customView wantsLayer="YES" id="vab-xt-vhu" userLabel="Sensitivity View">
+            <rect key="frame" x="0.0" y="0.0" width="223" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <slider verticalHuggingPriority="750" tag="1" id="LPw-Wz-O4n">
+                    <rect key="frame" x="65" y="76" width="124" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="30" doubleValue="7.5" tickMarkPosition="above" sliderType="linear" id="8jc-LM-qp4"/>
+                    <connections>
+                        <action selector="sensitivitySliderDidChange:" target="494" id="DPW-4L-zSd"/>
+                    </connections>
+                </slider>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="EmG-bT-gNq">
+                    <rect key="frame" x="-10" y="76" width="89" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Pitch &amp; Roll:" id="vTd-K0-AWe">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="2" id="tX8-og-PJO">
+                    <rect key="frame" x="187" y="77" width="34" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="7.5˚" id="Kno-xV-6Yl">
+                        <font key="font" metaFont="smallSystemBold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" tag="3" id="tYp-86-P6d">
+                    <rect key="frame" x="65" y="50" width="113" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="40" maxValue="350" doubleValue="80" tickMarkPosition="above" sliderType="linear" id="mOP-1F-xiM"/>
+                    <connections>
+                        <action selector="sensitivitySliderDidChange:" target="494" id="6DD-dQ-4YX"/>
+                    </connections>
+                </slider>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="86W-kh-uGA">
+                    <rect key="frame" x="-11" y="52" width="54" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Yaw:" id="4Nk-Nr-HR8">
+                        <font key="font" metaFont="smallSystemBold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="4" id="GXP-dd-nT5">
+                    <rect key="frame" x="174" y="51" width="46" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="80˚/s" id="pYe-uU-aXC">
+                        <font key="font" metaFont="smallSystemBold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" tag="5" id="O5C-1n-fKl">
+                    <rect key="frame" x="65" y="25" width="92" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="200" maxValue="2000" doubleValue="1200" tickMarkPosition="above" sliderType="linear" id="ZuO-OE-vnl"/>
+                    <connections>
+                        <action selector="sensitivitySliderDidChange:" target="494" id="xS9-Pg-I4D"/>
+                    </connections>
+                </slider>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1Bf-tP-qIR">
+                    <rect key="frame" x="-18" y="25" width="83" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Ascent:" id="OMZ-Kn-G6j">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="6" id="bgt-Z9-cGY">
+                    <rect key="frame" x="154" y="26" width="67" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="1200mm/s" id="aao-g9-6UG">
+                        <font key="font" metaFont="smallSystemBold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" tag="7" id="YEe-JF-9l6">
+                    <rect key="frame" x="65" y="0.0" width="92" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="200" maxValue="2000" doubleValue="900" tickMarkPosition="above" sliderType="linear" id="qeG-2q-y2J"/>
+                    <connections>
+                        <action selector="sensitivitySliderDidChange:" target="494" id="tgI-so-qFm"/>
+                    </connections>
+                </slider>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="TyL-qD-GOB">
+                    <rect key="frame" x="-15" y="0.0" width="83" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Descent:" id="1ip-8P-V9N">
+                        <font key="font" metaFont="systemBold" size="10"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="8" id="9zn-fZ-WYf">
+                    <rect key="frame" x="154" y="2" width="67" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="900mm/s" id="b8c-Ab-H7x">
+                        <font key="font" metaFont="smallSystemBold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button hidden="YES" verticalHuggingPriority="750" id="P5N-dG-CZ8">
+                    <rect key="frame" x="50" y="-26" width="123" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="roundRect" title="Restore Defaults" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VOp-RY-e7g">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="cellTitle"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="restoreDefaultSensitivities:" target="494" id="toR-Ne-wyg"/>
+                    </connections>
+                </button>
+            </subviews>
+        </customView>
+        <userDefaultsController representsSharedInstance="YES" id="gCc-el-TAb"/>
+        <customView identifier="HUD" wantsLayer="YES" id="YyP-UI-Uxo" userLabel="HUD" customClass="Drone3GHUD">
+            <rect key="frame" x="0.0" y="0.0" width="640" height="360"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Pwc-Mj-lJj">
+                    <rect key="frame" x="595" y="340" width="43" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="100%" id="j48-KZ-Bav">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" red="0.19215688110000001" green="0.96862751250000001" blue="0.023529414089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="rzJ-qf-IKU">
+                    <rect key="frame" x="557" y="2" width="89" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="0.0 km/h" id="UVk-Hk-EdR">
+                        <font key="font" metaFont="system" size="15"/>
+                        <color key="textColor" red="0.19215688110000001" green="0.96862751250000001" blue="0.023529414089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="GLD-Zj-gDd">
+                    <rect key="frame" x="-13" y="2" width="58" height="21"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0 ft" id="T5f-v9-aRz">
+                        <font key="font" metaFont="system" size="17"/>
+                        <color key="textColor" red="0.19215688110000001" green="0.96862751250000001" blue="0.023529414089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.21568629149999999" green="0.9450981021" blue="0.10588236149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="cIC-La-ctk">
+                    <rect key="frame" x="288" y="335" width="68" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="00:00" id="GDu-oN-rPw">
+                        <font key="font" metaFont="system" size="20"/>
+                        <color key="textColor" red="0.19215688110000001" green="0.96862751250000001" blue="0.023529414089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="QAS-pL-3JK">
+                    <rect key="frame" x="593" y="323" width="44" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <contentFilters>
+                        <ciFilter name="CIFalseColor">
+                            <configuration>
+                                <ciColor key="inputColor0" red="0.074509806931018829" green="0.80000007152557373" blue="0.13725490868091583" alpha="1"/>
+                                <ciColor key="inputColor1" red="0.22352942824363708" green="0.99215692281723022" blue="0.0039215688593685627" alpha="1"/>
+                                <null key="inputImage"/>
+                            </configuration>
+                        </ciFilter>
+                    </contentFilters>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="battery" id="j11-Ll-MlH"/>
+                </imageView>
+                <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ojW-S7-uBu">
+                    <rect key="frame" x="8" y="341" width="18" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <contentFilters>
+                        <ciFilter name="CIFalseColor">
+                            <configuration>
+                                <ciColor key="inputColor0" red="0.19215688109397888" green="0.96862751245498657" blue="0.023529414087533951" alpha="1"/>
+                                <ciColor key="inputColor1" red="0.40392160415649414" green="1" blue="0.0" alpha="1"/>
+                                <null key="inputImage"/>
+                            </configuration>
+                        </ciFilter>
+                    </contentFilters>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="3g_tower" id="yOT-NA-TdV"/>
+                </imageView>
+                <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6fQ-h1-CQ6">
+                    <rect key="frame" x="26" y="340" width="23" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <contentFilters>
+                        <ciFilter name="CIFalseColor">
+                            <configuration>
+                                <ciColor key="inputColor0" red="0.30980393290519714" green="0.99215692281723022" blue="0.011764707043766975" alpha="1"/>
+                                <ciColor key="inputColor1" red="0.40392160415649414" green="1" blue="0.0" alpha="1"/>
+                                <null key="inputImage"/>
+                            </configuration>
+                        </ciFilter>
+                    </contentFilters>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="3g4" id="W7t-RD-ORv"/>
+                </imageView>
+                <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Mxl-aN-XAP">
+                    <rect key="frame" x="51" y="339" width="23" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <contentFilters>
+                        <ciFilter name="CIFalseColor">
+                            <configuration>
+                                <ciColor key="inputColor0" red="0.14901961386203766" green="0.058823533356189728" blue="0.035294119268655777" alpha="1"/>
+                                <ciColor key="inputColor1" red="0.23529413342475891" green="0.93725496530532837" blue="0.035294119268655777" alpha="1"/>
+                                <null key="inputImage"/>
+                            </configuration>
+                        </ciFilter>
+                    </contentFilters>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="controller" id="JBO-DI-xMQ"/>
+                </imageView>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="sGp-Wb-tmT">
+                    <rect key="frame" x="300" y="20" width="38" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="N" id="jCx-n4-l2D">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="0FH-IP-Bsj">
+                    <rect key="frame" x="303" y="94" width="38" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="S" id="UHD-Z6-T2s">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="bkD-FE-qD6">
+                    <rect key="frame" x="32" y="20" width="38" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="W" id="bUa-iF-rQx">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="8vX-aV-JGz">
+                    <rect key="frame" x="590" y="20" width="38" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="E" id="SEk-Zl-fVp">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="LGz-rG-Uuy">
+                    <rect key="frame" x="302" y="38" width="43" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0º" id="2xl-l3-hC5">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="M4p-xh-Hft">
+                    <rect key="frame" x="303" y="109" width="43" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0º" id="HJy-pb-dVA">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="X1F-oD-vQH">
+                    <rect key="frame" x="32" y="38" width="43" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0º" id="VQP-h3-WdK">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ubI-JT-jlS">
+                    <rect key="frame" x="594" y="38" width="43" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0º" id="Hbq-br-a5a">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="fbc-Qw-8A7">
+                    <rect key="frame" x="279" y="-11" width="88" height="58"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0º" id="GqO-LE-IxU">
+                        <font key="font" metaFont="system" size="18"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Lvy-a2-Y8l">
+                    <rect key="frame" x="267" y="-24" width="104" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="N" id="m9M-i8-bHP">
+                        <font key="font" metaFont="system" size="18"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="82t-n4-ehF">
+                    <rect key="frame" x="79" y="340" width="116" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="GPS " id="Uhp-Kw-IN1">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="1" green="0.14371280763057503" blue="0.24681943874457979" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="smi-hd-xDd">
+                    <rect key="frame" x="211" y="305" width="222" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="TOO MUCH ANGLE EMERGENCY" id="rFl-YT-g1m">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="0.94581653225806439" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="OSS-Lo-0mI">
+                    <rect key="frame" x="266" y="321" width="111" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Distance: 0m" id="DLs-jn-SnT">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="9uX-Vz-SEh">
+                    <rect key="frame" x="6" y="323" width="149" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Wind: 0.0 km/h" id="0Cw-uc-TBv">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.024477066530000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="649" id="3rR-2k-C2e">
+                    <rect key="frame" x="80" y="180" width="480" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Awaiting connection to drone..." allowsEditingTextAttributes="YES" id="67W-rC-Ids">
+                        <font key="font" metaFont="system" size="22"/>
+                        <color key="textColor" red="1" green="0.068170362903225812" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView id="ufe-7n-wnc" customClass="Drone3GProgressIndicator">
+                    <rect key="frame" x="292" y="138" width="54" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                </customView>
+                <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="iL2-xC-FpS">
+                    <rect key="frame" x="314" y="57" width="34" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="home" id="Vge-w4-q09"/>
+                </imageView>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="lxu-Zx-3KB">
+                    <rect key="frame" x="311" y="33" width="46" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0º" id="hAW-cd-KrA">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="edc-zY-ALb">
+                    <rect key="frame" x="17" y="32" width="606" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Ensure the USB modem is plugged in before connecting the battery." id="DKy-pY-Roz">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.25" colorSpace="deviceWhite"/>
+                    </textFieldCell>
+                </textField>
+                <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="iTl-xX-vp6">
+                    <rect key="frame" x="6" y="298" width="42" height="42"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="record" id="O2T-bg-qFx"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="18" id="pAI-4x-KCI">
+                    <rect key="frame" x="-2" y="33" width="645" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Click, then click again and hold while swiping your finger to the left to go back" id="dmE-1M-LQ5">
+                        <font key="font" metaFont="system" size="16"/>
+                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button hidden="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="18" id="qIu-Mw-T7r">
+                    <rect key="frame" x="52" y="337" width="22" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <buttonCell key="cell" type="help" bezelStyle="helpButton" image="help.png" imagePosition="only" alignment="center" controlSize="mini" borderStyle="border" imageScaling="axesIndependently" inset="2" id="XwE-bo-tpi">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="showControllerHelp:" target="494" id="4x6-bC-svK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+        </customView>
+        <customView wantsLayer="YES" id="pgo-t4-gnl" userLabel="Main Menu" customClass="Drone3GMenu">
+            <rect key="frame" x="0.0" y="0.0" width="640" height="360"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" tag="1" id="Xxs-eJ-ag0">
+                    <rect key="frame" x="1" y="0.0" width="640" height="360"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="main" id="PyJ-OX-Dx9"/>
+                </imageView>
+                <customView identifier="1" id="fj0-XA-EHk" customClass="Drone3GMenuButton">
+                    <rect key="frame" x="236" y="134" width="170" height="61"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="1" id="d33-1u-5DA">
+                            <rect key="frame" x="4" y="10" width="161" height="41"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Install" id="xbK-xg-hNE">
+                                <font key="font" metaFont="system" size="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                </customView>
+                <customView identifier="0" id="qyH-QR-1W5" customClass="Drone3GMenuButton">
+                    <rect key="frame" x="236" y="51" width="170" height="61"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="1" id="G51-Ke-c2g">
+                            <rect key="frame" x="11" y="18" width="152" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Uninstall" id="HGE-ta-A5o">
+                                <font key="font" metaFont="system" size="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                </customView>
+                <imageView identifier="3" horizontalHuggingPriority="251" verticalHuggingPriority="251" tag="2" id="621-ud-hsY">
+                    <rect key="frame" x="166" y="243" width="308" height="161"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="title" id="Khy-P3-2S0"/>
+                </imageView>
+                <customView identifier="2" id="6ZL-U4-Okq" customClass="Drone3GMenuButton">
+                    <rect key="frame" x="236" y="218" width="170" height="57"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="1" id="8Bm-EB-nQQ">
+                            <rect key="frame" x="5" y="7" width="160" height="41"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Fly" id="Wii-eo-Kql">
+                                <font key="font" metaFont="system" size="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                </customView>
+                <scrollView identifier="CONSOLE" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" id="F0N-dO-FXw">
+                    <rect key="frame" x="70" y="39" width="500" height="281"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <clipView key="contentView" identifier="__CONSOLE" drawsBackground="NO" copiesOnScroll="NO" id="XYb-O9-8Ta">
+                        <rect key="frame" x="1" y="1" width="223" height="133"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView identifier="_CONSOLE" hidden="YES" editable="NO" selectable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="ZMs-Po-V1h" customClass="Drone3GTextView">
+                                <rect key="frame" x="0.0" y="0.0" width="223" height="281"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                <size key="minSize" width="500" height="281"/>
+                                <size key="maxSize" width="640" height="10000000"/>
+                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <size key="minSize" width="500" height="281"/>
+                                <size key="maxSize" width="640" height="10000000"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" identifier="____CONSOLE" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="2AP-Rp-sse">
+                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" identifier="___CONSOLE" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="lSt-io-EKu">
+                        <rect key="frame" x="224" y="1" width="15" height="133"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <connections>
+                        <binding destination="494" name="hidden" keyPath="proxyLogView.hidden" id="VLQ-fP-toO"/>
+                    </connections>
+                </scrollView>
+                <customView identifier="_____CONSOLE" hidden="YES" id="169-Im-KUI" customClass="Drone3GScrollViewOverlay">
+                    <rect key="frame" x="70" y="34" width="500" height="291"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <binding destination="494" name="hidden" keyPath="proxyLogView.hidden" id="msz-Tj-WhX"/>
+                    </connections>
+                </customView>
+            </subviews>
+        </customView>
+        <customView identifier="LOGIN_VIEW" wantsLayer="YES" id="yh7-BB-bmP" userLabel="Login View" customClass="Drone3GLoginView">
+            <rect key="frame" x="0.0" y="0.0" width="640" height="360"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" tag="1" id="GKe-D4-NHC">
+                    <rect key="frame" x="263" y="251" width="115" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="y6n-Se-H5C">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" tag="3" id="0c8-tH-xfw">
+                    <rect key="frame" x="263" y="129" width="115" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="h9l-6a-8Wn">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <secureTextField verticalHuggingPriority="750" tag="2" id="amQ-pQ-azw">
+                    <rect key="frame" x="263" y="192" width="115" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="XpU-OW-y1J">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <allowedInputSourceLocales>
+                            <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                        </allowedInputSourceLocales>
+                    </secureTextFieldCell>
+                </secureTextField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="4" id="xGe-pk-jBM">
+                    <rect key="frame" x="265" y="270" width="111" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Username:" id="9aK-1D-5cl">
+                        <font key="font" metaFont="system" size="18"/>
+                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="5" id="pwV-tH-lSM">
+                    <rect key="frame" x="265" y="210" width="111" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Password:" id="IiN-aX-agQ">
+                        <font key="font" metaFont="system" size="18"/>
+                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView identifier="4" id="V69-aV-eME" customClass="Drone3GMenuButton">
+                    <rect key="frame" x="201" y="57" width="111" height="41"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="1" id="cJY-0I-2ve">
+                            <rect key="frame" x="-23.5" y="1" width="155.5" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Fly" id="OhE-nv-xVE">
+                                <font key="font" metaFont="system" size="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                </customView>
+                <customView identifier="5" id="XiC-hc-IF2" customClass="Drone3GMenuButton">
+                    <rect key="frame" x="328" y="57" width="111" height="41"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="1" id="hx6-C9-gAq">
+                            <rect key="frame" x="-12" y="10" width="135" height="23"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Start Relay" id="lPa-v5-548">
+                                <font key="font" metaFont="systemBold" size="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="6" id="iB3-nk-iy9">
+                    <rect key="frame" x="262" y="154" width="117" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drone Name:" id="r87-6X-FUA">
+                        <font key="font" metaFont="system" size="17"/>
+                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" tag="7" setsMaxLayoutWidthAtFirstLayout="YES" id="KaH-pn-yqP">
+                    <rect key="frame" x="18" y="-7" width="604" height="51"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="81D-Gq-jhM">
+                        <font key="font" metaFont="smallSystem"/>
+                        <string key="title">Enter the login information you setup when installing your drone. You can change this at any time in preferences. You will not be able to connect if the login information is incorrect.</string>
+                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView id="cFD-TA-LMD" customClass="Drone3GCheckBox">
+                    <rect key="frame" x="183" y="106" width="288" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="1" id="sM1-2k-eup">
+                            <rect key="frame" x="15" y="3" width="273" height="13"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Check this box if you will be connecting through a relay" id="Opl-Ep-Rlc">
+                                <font key="font" metaFont="system" size="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                </customView>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="18" id="nPo-eB-ipR">
+                    <rect key="frame" x="427" y="82" width="25" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <buttonCell key="cell" type="help" bezelStyle="helpButton" image="help.png" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="axesIndependently" inset="2" id="Qgg-vZ-q65">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="showProxyHelp:" target="494" id="coB-yH-CzU"/>
+                    </connections>
+                </button>
+            </subviews>
+        </customView>
+        <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="0vm-lw-TiQ">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="281"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="xmy-hR-QJN">
+                <rect key="frame" x="1" y="1" width="223" height="133"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <textView editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="NNj-3C-zjt">
+                        <rect key="frame" x="0.0" y="0.0" width="223" height="281"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <color key="textColor" red="0.001725427831" green="1" blue="0.002677035099" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                        <size key="minSize" width="500" height="281"/>
+                        <size key="maxSize" width="640" height="10000000"/>
+                        <attributedString key="textStorage">
+                            <fragment content="test">
+                                <attributes>
+                                    <color key="NSColor" red="0.001725427831" green="1" blue="0.002677035099" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" size="12" name="Helvetica"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <size key="minSize" width="500" height="281"/>
+                        <size key="maxSize" width="640" height="10000000"/>
+                    </textView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            </clipView>
+            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="rtp-S3-dsB">
+                <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </scroller>
+            <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="gyY-cv-PXT">
+                <rect key="frame" x="224" y="1" width="15" height="133"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </scroller>
+            <point key="canvasLocation" x="287" y="-119.5"/>
+        </scrollView>
+    </objects>
+    <resources>
+        <image name="3g4" width="76.800003051757812" height="76.800003051757812"/>
+        <image name="3g_tower" width="78" height="78"/>
+        <image name="battery" width="266" height="266"/>
+        <image name="controller" width="64" height="42"/>
+        <image name="help.png" width="128" height="128"/>
+        <image name="home" width="100" height="106"/>
+        <image name="main" width="1280" height="800"/>
+        <image name="record" width="64" height="21"/>
+        <image name="title" width="512" height="124"/>
+    </resources>
+</document>

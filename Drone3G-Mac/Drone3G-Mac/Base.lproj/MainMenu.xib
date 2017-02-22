@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1080" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="494" id="495"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <menu title="AMainMenu" systemMenu="main" id="29">
+            <items>
+                <menuItem title="Drone3G-Mac" id="56">
+                    <menu key="submenu" title="Drone3G-Mac" systemMenu="apple" id="57">
+                        <items>
+                            <menuItem title="About Drone3G-Mac" id="58">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="236">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Preferences…" keyEquivalent="," id="129">
+                                <connections>
+                                    <action selector="openPreferences:" target="494" id="8ph-XP-uny"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="143">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Services" id="131">
+                                <menu key="submenu" title="Services" systemMenu="services" id="130"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="144">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Hide Drone3G-Mac" keyEquivalent="h" id="134">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="367"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="145">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="368"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="150">
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="370"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="149">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Quit Drone3G-Mac" keyEquivalent="q" id="136">
+                                <connections>
+                                    <action selector="terminate:" target="-3" id="449"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Video Quality" id="GXi-no-i0F">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Video Quality" autoenablesItems="NO" id="wpi-aw-ZLU">
+                        <items>
+                            <menuItem title="SD - Standard Definition (360p)" enabled="NO" id="xtY-Fm-BxR">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="use360pVideo:" target="494" id="sDz-hE-X1k"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="HD - High Definition (720p)" enabled="NO" id="IP1-AG-wdw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="use720pVideo:" target="494" id="HoD-yM-YP4"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="rAw-fq-mBt"/>
+                            <menuItem title="Bitrate" id="OTA-A8-xgr">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Slider" id="wCt-yh-PgD">
+                                <attributedString key="attributedTitle"/>
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Data Usage" id="AsI-X2-IZy">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Data Usage" autoenablesItems="NO" id="PdE-4e-4Km">
+                        <items>
+                            <menuItem title="Check Data Usage..." enabled="NO" id="Bhg-FR-aIJ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="checkDataUsage:" target="494" id="jFr-SK-pIK"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Sensitivities" id="l3Q-C9-kZP">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Sensitivities" autoenablesItems="NO" id="ZzL-AZ-Hzl">
+                        <items>
+                            <menuItem title="Sensitivities Custom View" id="aUo-7h-xDG">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                        </items>
+                        <connections>
+                            <outlet property="delegate" destination="494" id="ZCM-GW-BKA"/>
+                        </connections>
+                    </menu>
+                </menuItem>
+                <menuItem title="Plan a Flight" id="VJM-QT-AxE">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Plan a Flight" autoenablesItems="NO" id="2B0-Dq-Jbl">
+                        <items>
+                            <menuItem title="Open Flight Planner..." id="XmG-EE-Gbk">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openFlightPlanner:" target="494" id="dFk-B6-aB2"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="Drone3G" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
+            <rect key="contentRect" x="317" y="229" width="640" height="354"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
+            <view key="contentView" wantsLayer="YES" id="372">
+                <rect key="frame" x="0.0" y="0.0" width="640" height="354"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView id="YyP-UI-Uxo">
+                        <rect key="frame" x="0.0" y="-3" width="640" height="360"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <openGLView colorSize="8bit_RGB" useAuxiliaryDepthBufferStencil="NO" allowOffline="YES" id="IY9-Ly-IKF" customClass="Drone3GGLView">
+                                <rect key="frame" x="0.0" y="0.0" width="640" height="366"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </openGLView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="649" id="3rR-2k-C2e">
+                                <rect key="frame" x="94" y="169" width="453" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Awaiting Connection..." allowsEditingTextAttributes="YES" id="67W-rC-Ids">
+                                    <font key="font" size="17" name="LucidaGrande"/>
+                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Pwc-Mj-lJj">
+                                <rect key="frame" x="595" y="337" width="43" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="100%" id="j48-KZ-Bav">
+                                    <font key="font" size="11" name="LucidaGrande"/>
+                                    <color key="textColor" red="0.19215688110000001" green="0.96862751250000001" blue="0.023529414089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="rzJ-qf-IKU">
+                                <rect key="frame" x="557" y="2" width="89" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="0.0 km/h" id="UVk-Hk-EdR">
+                                    <font key="font" metaFont="system" size="15"/>
+                                    <color key="textColor" red="0.19215688110000001" green="0.96862751250000001" blue="0.023529414089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="GLD-Zj-gDd">
+                                <rect key="frame" x="-13" y="2" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0 ft" id="T5f-v9-aRz">
+                                    <font key="font" metaFont="system" size="17"/>
+                                    <color key="textColor" red="0.19215688110000001" green="0.96862751250000001" blue="0.023529414089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.21568629149999999" green="0.9450981021" blue="0.10588236149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="cIC-La-ctk">
+                                <rect key="frame" x="288" y="332" width="68" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="00:00" id="GDu-oN-rPw">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" red="0.19215688110000001" green="0.96862751250000001" blue="0.023529414089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="QAS-pL-3JK">
+                                <rect key="frame" x="593" y="320" width="44" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <contentFilters>
+                                    <ciFilter name="CIFalseColor">
+                                        <configuration>
+                                            <ciColor key="inputColor0" red="0.074509806931018829" green="0.80000007152557373" blue="0.13725490868091583" alpha="1"/>
+                                            <ciColor key="inputColor1" red="0.22352942824363708" green="0.99215692281723022" blue="0.0039215688593685627" alpha="1"/>
+                                            <null key="inputImage"/>
+                                        </configuration>
+                                    </ciFilter>
+                                </contentFilters>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="battery" id="j11-Ll-MlH"/>
+                            </imageView>
+                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ojW-S7-uBu">
+                                <rect key="frame" x="8" y="338" width="18" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <contentFilters>
+                                    <ciFilter name="CIFalseColor">
+                                        <configuration>
+                                            <ciColor key="inputColor0" red="0.19215688109397888" green="0.96862751245498657" blue="0.023529414087533951" alpha="1"/>
+                                            <ciColor key="inputColor1" red="0.40392160415649414" green="1" blue="0.0" alpha="1"/>
+                                            <null key="inputImage"/>
+                                        </configuration>
+                                    </ciFilter>
+                                </contentFilters>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="3g_tower" id="yOT-NA-TdV"/>
+                            </imageView>
+                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6fQ-h1-CQ6">
+                                <rect key="frame" x="26" y="337" width="23" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <contentFilters>
+                                    <ciFilter name="CIFalseColor">
+                                        <configuration>
+                                            <ciColor key="inputColor0" red="0.30980393290519714" green="0.99215692281723022" blue="0.011764707043766975" alpha="1"/>
+                                            <ciColor key="inputColor1" red="0.40392160415649414" green="1" blue="0.0" alpha="1"/>
+                                            <null key="inputImage"/>
+                                        </configuration>
+                                    </ciFilter>
+                                </contentFilters>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="3g4" id="W7t-RD-ORv"/>
+                            </imageView>
+                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Mxl-aN-XAP">
+                                <rect key="frame" x="51" y="336" width="23" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <contentFilters>
+                                    <ciFilter name="CIFalseColor">
+                                        <configuration>
+                                            <ciColor key="inputColor0" red="0.14901961386203766" green="0.058823533356189728" blue="0.035294119268655777" alpha="1"/>
+                                            <ciColor key="inputColor1" red="0.23529413342475891" green="0.93725496530532837" blue="0.035294119268655777" alpha="1"/>
+                                            <null key="inputImage"/>
+                                        </configuration>
+                                    </ciFilter>
+                                </contentFilters>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="controller" id="JBO-DI-xMQ"/>
+                            </imageView>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="sGp-Wb-tmT">
+                                <rect key="frame" x="300" y="20" width="38" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="N" id="jCx-n4-l2D">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="0FH-IP-Bsj">
+                                <rect key="frame" x="303" y="93" width="38" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="S" id="UHD-Z6-T2s">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="bkD-FE-qD6">
+                                <rect key="frame" x="32" y="20" width="38" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="W" id="bUa-iF-rQx">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="8vX-aV-JGz">
+                                <rect key="frame" x="590" y="20" width="38" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="E" id="SEk-Zl-fVp">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="LGz-rG-Uuy">
+                                <rect key="frame" x="302" y="38" width="43" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0º" id="2xl-l3-hC5">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="M4p-xh-Hft">
+                                <rect key="frame" x="303" y="108" width="43" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0º" id="HJy-pb-dVA">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="X1F-oD-vQH">
+                                <rect key="frame" x="32" y="38" width="43" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0º" id="VQP-h3-WdK">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ubI-JT-jlS">
+                                <rect key="frame" x="594" y="38" width="43" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0º" id="Hbq-br-a5a">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="fbc-Qw-8A7">
+                                <rect key="frame" x="279" y="-11" width="88" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0º" id="GqO-LE-IxU">
+                                    <font key="font" metaFont="system" size="18"/>
+                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Lvy-a2-Y8l">
+                                <rect key="frame" x="267" y="-24" width="104" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="N" id="m9M-i8-bHP">
+                                    <font key="font" metaFont="system" size="18"/>
+                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="82t-n4-ehF">
+                                <rect key="frame" x="7" y="320" width="116" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="GPS " id="Uhp-Kw-IN1">
+                                    <font key="font" size="13" name="LucidaGrande"/>
+                                    <color key="textColor" red="1" green="0.14371280763057503" blue="0.24681943874457979" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </customView>
+                </subviews>
+            </view>
+        </window>
+        <customObject id="494" customClass="Drone3GAppDelegate">
+            <connections>
+                <outlet property="altitudeLabel" destination="GLD-Zj-gDd" id="Kbn-1N-gIq"/>
+                <outlet property="angleLabel" destination="fbc-Qw-8A7" id="Kos-V6-oIj"/>
+                <outlet property="batteryImageView" destination="QAS-pL-3JK" id="r79-tP-6Mf"/>
+                <outlet property="batteryLabel" destination="Pwc-Mj-lJj" id="MsO-oV-f3M"/>
+                <outlet property="bitrateLabel" destination="VgR-tx-GxE" id="hJR-QR-Yze"/>
+                <outlet property="bitrateMenuItem" destination="OTA-A8-xgr" id="Max-2Y-BcO"/>
+                <outlet property="bitrateSlider" destination="M8T-2E-sBu" id="A8q-Xz-TPI"/>
+                <outlet property="connectionLabel" destination="3rR-2k-C2e" id="7Rr-D2-qHQ"/>
+                <outlet property="controllerImageView" destination="Mxl-aN-XAP" id="dWn-ao-Zcq"/>
+                <outlet property="dataUsageMenuItem" destination="Bhg-FR-aIJ" id="sxm-uD-s0f"/>
+                <outlet property="directionLabel" destination="Lvy-a2-Y8l" id="vK1-pV-Uco"/>
+                <outlet property="drone3GGLView" destination="IY9-Ly-IKF" id="hrT-oa-bdz"/>
+                <outlet property="eastAngleLabel" destination="ubI-JT-jlS" id="1Do-CW-yn2"/>
+                <outlet property="eastLabel" destination="8vX-aV-JGz" id="tLk-HC-gAS"/>
+                <outlet property="flightPlanMenuItem" destination="XmG-EE-Gbk" id="iaE-Jz-Pka"/>
+                <outlet property="gpsLabel" destination="82t-n4-ehF" id="IcP-cm-X03"/>
+                <outlet property="hdMenuItem" destination="IP1-AG-wdw" id="ShK-pq-PlW"/>
+                <outlet property="northAngleLabel" destination="LGz-rG-Uuy" id="8uA-3M-89K"/>
+                <outlet property="northLabel" destination="sGp-Wb-tmT" id="9CE-5c-v9z"/>
+                <outlet property="sdMenuItem" destination="xtY-Fm-BxR" id="RbM-ZK-P7q"/>
+                <outlet property="sensitivityMenuItem" destination="aUo-7h-xDG" id="XEf-hE-xPe"/>
+                <outlet property="sensitivityView" destination="vab-xt-vhu" id="gvl-KG-Mf4"/>
+                <outlet property="signalIconImageView" destination="ojW-S7-uBu" id="iv7-pN-bAd"/>
+                <outlet property="signalLevelImageView" destination="6fQ-h1-CQ6" id="dUq-kw-drQ"/>
+                <outlet property="sliderMenuItem" destination="wCt-yh-PgD" id="la6-jB-nEP"/>
+                <outlet property="southAngleLabel" destination="M4p-xh-Hft" id="vrg-nI-FxT"/>
+                <outlet property="southLabel" destination="0FH-IP-Bsj" id="Vij-AP-xJu"/>
+                <outlet property="timeFlyingLabel" destination="cIC-La-ctk" id="vbX-of-FE1"/>
+                <outlet property="velocityLabel" destination="rzJ-qf-IKU" id="R6C-wl-Q8Q"/>
+                <outlet property="westAngleLabel" destination="X1F-oD-vQH" id="PGq-Fz-pew"/>
+                <outlet property="westLabel" destination="bkD-FE-qD6" id="sc5-WA-Ab5"/>
+                <outlet property="window" destination="371" id="532"/>
+            </connections>
+        </customObject>
+        <customObject id="420" customClass="NSFontManager"/>
+        <menu title="Data Usage" id="dUJ-kc-WlD">
+            <items>
+                <menuItem title="Check Data Usage..." id="MWe-2b-a2w">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+            </items>
+        </menu>
+        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="VgR-tx-GxE">
+            <rect key="frame" x="0.0" y="0.0" width="183" height="17"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="                Bitrate: 500Kbps" id="6HN-vn-dCg">
+                <font key="font" metaFont="system"/>
+                <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+            </textFieldCell>
+        </textField>
+        <customView id="M8T-2E-sBu" userLabel="Bitrate Slider View">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="28"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <slider verticalHuggingPriority="750" id="p0q-I1-Is2">
+                    <rect key="frame" x="18" y="-1" width="220" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <sliderCell key="cell" continuous="YES" enabled="NO" state="on" alignment="left" minValue="250" maxValue="4000" doubleValue="500" tickMarkPosition="above" numberOfTickMarks="6" sliderType="linear" id="cRB-NR-VyX"/>
+                    <connections>
+                        <action selector="changeBitrate:" target="494" id="czu-cg-lv9"/>
+                    </connections>
+                </slider>
+            </subviews>
+        </customView>
+        <customView wantsLayer="YES" id="vab-xt-vhu" userLabel="Sensitivity View">
+            <rect key="frame" x="0.0" y="0.0" width="223" height="121"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <slider verticalHuggingPriority="750" tag="1" id="LPw-Wz-O4n">
+                    <rect key="frame" x="75" y="102" width="117" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.25" tickMarkPosition="above" sliderType="linear" id="8jc-LM-qp4"/>
+                    <connections>
+                        <action selector="sensitivitySliderDidChange:" target="494" id="DPW-4L-zSd"/>
+                    </connections>
+                </slider>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="EmG-bT-gNq">
+                    <rect key="frame" x="-6" y="102" width="89" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Pitch and Roll:" id="vTd-K0-AWe">
+                        <font key="font" size="10" name="LucidaGrande-Bold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="2" id="tX8-og-PJO">
+                    <rect key="frame" x="191" y="104" width="26" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0.25" id="Kno-xV-6Yl">
+                        <font key="font" size="11" name="LucidaGrande-Bold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" tag="3" id="tYp-86-P6d">
+                    <rect key="frame" x="75" y="75" width="117" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.23000000000000001" tickMarkPosition="above" sliderType="linear" id="mOP-1F-xiM"/>
+                    <connections>
+                        <action selector="sensitivitySliderDidChange:" target="494" id="6DD-dQ-4YX"/>
+                    </connections>
+                </slider>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="86W-kh-uGA">
+                    <rect key="frame" x="-11" y="77" width="54" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Yaw:" id="4Nk-Nr-HR8">
+                        <font key="font" size="11" name="LucidaGrande-Bold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="4" id="GXP-dd-nT5">
+                    <rect key="frame" x="191" y="77" width="26" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0.23" id="pYe-uU-aXC">
+                        <font key="font" size="11" name="LucidaGrande-Bold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" tag="5" id="O5C-1n-fKl">
+                    <rect key="frame" x="75" y="50" width="117" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="above" sliderType="linear" id="ZuO-OE-vnl"/>
+                    <connections>
+                        <action selector="sensitivitySliderDidChange:" target="494" id="xS9-Pg-I4D"/>
+                    </connections>
+                </slider>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1Bf-tP-qIR">
+                    <rect key="frame" x="-18" y="50" width="83" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Ascent:" id="OMZ-Kn-G6j">
+                        <font key="font" size="10" name="LucidaGrande-Bold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="6" id="bgt-Z9-cGY">
+                    <rect key="frame" x="191" y="52" width="26" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0.5" id="aao-g9-6UG">
+                        <font key="font" size="11" name="LucidaGrande-Bold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" tag="7" id="YEe-JF-9l6">
+                    <rect key="frame" x="75" y="25" width="117" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.34999999999999998" tickMarkPosition="above" sliderType="linear" id="qeG-2q-y2J"/>
+                    <connections>
+                        <action selector="sensitivitySliderDidChange:" target="494" id="tgI-so-qFm"/>
+                    </connections>
+                </slider>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="TyL-qD-GOB">
+                    <rect key="frame" x="-15" y="25" width="83" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Descent:" id="1ip-8P-V9N">
+                        <font key="font" size="10" name="LucidaGrande-Bold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="8" id="9zn-fZ-WYf">
+                    <rect key="frame" x="191" y="27" width="26" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0.35" id="b8c-Ab-H7x">
+                        <font key="font" size="11" name="LucidaGrande-Bold"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" id="P5N-dG-CZ8">
+                    <rect key="frame" x="50" y="-1" width="123" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="roundRect" title="Restore Defaults" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VOp-RY-e7g">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="cellTitle"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="restoreDefaultSensitivities:" target="494" id="toR-Ne-wyg"/>
+                    </connections>
+                </button>
+            </subviews>
+        </customView>
+    </objects>
+    <resources>
+        <image name="3g4" width="76.800003051757812" height="76.800003051757812"/>
+        <image name="3g_tower" width="78" height="78"/>
+        <image name="battery" width="266" height="266"/>
+        <image name="controller" width="64" height="42"/>
+    </resources>
+</document>

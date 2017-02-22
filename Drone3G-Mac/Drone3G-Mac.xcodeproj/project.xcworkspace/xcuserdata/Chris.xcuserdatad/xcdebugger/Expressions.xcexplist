@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "drone3g_data_loop:drone_com.c">
+      </ContextState>
+      <ContextState
+         contextName = "-[Drone3GPREFWindowController loadControllerMap:]:Drone3GPREFWindowController.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
